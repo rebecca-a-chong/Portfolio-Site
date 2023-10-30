@@ -28,16 +28,22 @@
         <div class="hero">
                 <h1 class="hi-rebecca">Hi, I'm <span class="Rebecca">Rebecca!</span></h1>
                 <h3 class="ux-designer"> I'm a UX Designer c<span class="dot-1">o</span>nnecting the d<span class="dot-2">o</span>ts between user-centricity and business strategy.</h3>
-            
-            <div class="arrow">
-                <img src="img/Arrow.gif" alt="Downwards Arrow">
-            </div>
+
+                <svg class="c-dashed-line" width="192" height="150" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <path id="c-dashed-line" d="M4 75 L188 75" />
+                    </defs>
+                    <!-- A solid gray line that I'm animating -->
+                    <use class="c-dashed-line__path" xlink:href="#c-dashed-line" />
+                    <!-- A dashed white line that sits on top of the solid gray line -->
+                    <use class="c-dashed-line__dash" xlink:href="#c-dashed-line" />
+                </svg>
+        
+                
         </div>
     </main>
 
-    <div class="animated-line">
-        <div class="dashed-line"></div>
-    </div>
+    
 </body>
 
 </html>
