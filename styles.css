@@ -58,12 +58,13 @@
       position: relative;
     }
 
-/* Navigation Bar - About and Work Dot Highlights*/
-    .about-letter, .work-letter {
+/* Navigation Bar - Work and About Dot Highlights*/
+    .work-letter, .about-letter {
+      position:relative;
       display: inline-block;
     }
 
-    .about-letter::after, .work-letter::after {
+    .work-letter::after, .about-letter::after {
       content: "";
       position: absolute;
       width: 23.5px;
@@ -74,19 +75,20 @@
       transition: background-color 0.1s;
     }
 
-    .navbar a:hover .about-letter::after {
-      background-color: #0078FC;
-      left: 50%;
-      transform: translateX(-45%);
-      opacity: 1;
-    }
-
     .navbar a:hover .work-letter::after {
       background-color: #FF6A59;
       left: 50%;
-      transform: translateX(-65%);
+      transform: translateX(-50%);
       opacity: 1;
     }
+    
+    .navbar a:hover .about-letter::after {
+      background-color: #0078FC;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 1;
+    }
+
 
 /* Hero - Text Transitions */
     .hero {
@@ -135,6 +137,8 @@
     .hero h3 { /* Adjust the space within the hero */
       margin: top 2rem;
     }
+
+  
 
 /* Hero - Dot Bounce Animation */
     .dot-1, .dot-2 {
@@ -193,23 +197,31 @@
     }
 
 /* Hero - Dotted Line Animation */
-    .c-dashed-line__path {
-      animation: c-dashed-line-path 1s ease-in forwards;
+        
+    .dashed-line {
+      position: relative;
+      top:40%; /* Adjust this value as needed */
+      left: 54.8%;
+      transform: translate(-50%, -50%);
+    }
+
+    .hero:hover .dashed-line__path {
+      animation: dashed-line-path 1s ease-in forwards;
       fill: none;
       stroke: #B4B4B4;
-      stroke-dasharray: 184; /* This is the length of the line */
-      stroke-dashoffset: 184; /* This is the length of the line */
+      stroke-dasharray: 185; /* This is the length of the line */
+      stroke-dashoffset: 185; /* This is the length of the line */
       stroke-width: 4; /* Adjust the stroke width as needed */
     }
 
-    .c-dashed-line__dash {
+    .dashed-line__dash {
       fill: none;
       stroke: #FFFFFF; /* This must match the background color */
-      stroke-dasharray: 4 12; /* Draws a 12px dash line with a 4px gap between */
+      stroke-dasharray: 2 12; /* Draws a 12px dash line with a 4px gap between */
       stroke-width: 5; /* Make the dashed line slightly bigger than the one it's covering */
     }
 
-    @keyframes c-dashed-line-path {
+    @keyframes dashed-line-path {
       from {
           stroke-dashoffset: 184;
       }
@@ -218,3 +230,35 @@
       }
     }
 
+  
+
+
+/* Hero - Arrow */
+  .container {
+    position: relative;
+    width: 56px;
+    height: 70px;
+  }
+
+  .background-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .moving-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moveUpDown 0.6s linear infinite alternate;
+    transform-origin: center;
+  }
+
+  @keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(6px);
+    }
+  }

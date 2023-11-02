@@ -18,32 +18,44 @@
         <div class="navbar">
             <img src="img/Personal Logo.png" alt="Personal Logo" class="logo">
             <ul>
-                <li><a href="#">A<span class="about-letter">b</span>out</a></li>
                 <li><a href="#">W<span class="work-letter">o</span>rk</a></li>
+                <li><a href="#">Ab<span class="about-letter">o</span>ut</a></li>
             </ul>
         </div>
     </header>
     
     <main>
         <div class="hero">
-                <h1 class="hi-rebecca">Hi, I'm <span class="Rebecca">Rebecca!</span></h1>
-                <h3 class="ux-designer"> I'm a UX Designer c<span class="dot-1">o</span>nnecting the d<span class="dot-2">o</span>ts between user-centricity and business strategy.</h3>
+                <h1 class="greeting">Hi, I'm <span class="Rebecca">Rebecca!</span></h1>
+               
+                <h3 class="intro-blurb"> I'm a UX Designer c<span class="dot-1">o</span>nnecting the d<span class="dot-2">o</span>ts between user-centricity and business strategy.</h3>
 
-                <svg class="c-dashed-line" width="192" height="150" xmlns="http://www.w3.org/2000/svg">
+                <svg class="dashed-line" width="192" height="80" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                        <path id="c-dashed-line" d="M4 75 L188 75" />
+                    <path id="dashed-line" d="M4 75 L188 75" />
                     </defs>
-                    <!-- A solid gray line that I'm animating -->
-                    <use class="c-dashed-line__path" xlink:href="#c-dashed-line" />
+                    <!-- A solid gray line -->
+                    <use class="dashed-line__path" xlink:href="#dashed-line" />
                     <!-- A dashed white line that sits on top of the solid gray line -->
-                    <use class="c-dashed-line__dash" xlink:href="#c-dashed-line" />
+                    <use class="dashed-line__dash" xlink:href="#dashed-line" />
                 </svg>
-        
+
+                        
+                <div class="arrow-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="background-circle" width="56" height="70" viewBox="0 0 56 70" fill="none">
+                        <circle cx="28" cy="42" r="28" fill="#0078FC" fill-opacity="0.6"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="moving-arrow" width="56" height="70" viewBox="0 0 56 70" fill="none">
+                        <path d="M26.9393 50.0607C27.5251 50.6464 28.4749 50.6464 29.0607 50.0607L38.6066 40.5147C39.1924 39.9289 39.1924 38.9792 38.6066 38.3934C38.0208 37.8076 37.0711 37.8076 36.4853 38.3934L28 46.8787L19.5147 38.3934C18.9289 37.8076 17.9792 37.8076 17.3934 38.3934C16.8076 38.9792 16.8076 39.9289 17.3934 40.5147L26.9393 50.0607ZM26.5 6.55671e-08L26.5 49L29.5 49L29.5 -6.55671e-08L26.5 6.55671e-08Z" fill="black"/>
+                    </svg>
+                </div>
+
                 
-        </div>
+
     </main>
 
-    
+
+
 </body>
 
 </html>
