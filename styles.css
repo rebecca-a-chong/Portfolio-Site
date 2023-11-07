@@ -14,7 +14,6 @@ body{
 
 
 /* Typography */
-
 h1, h2, h3, h5, .large-body {
   color: #000;
   font-weight: 400;
@@ -108,7 +107,7 @@ h5 {
 }
 
 
-/* Hero - Text Transitions */
+/* Hero - Text*/
 .hero {
   display: flex;
   flex-direction: column;
@@ -176,7 +175,7 @@ h5 {
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
-  animation: moveUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fadeOut 4s ease-in 15s forwards;
+  animation: moveUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fadeOut 2s ease-in 1s forwards;
   animation-delay: 0.4s;
 }
 
@@ -185,7 +184,25 @@ h5 {
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
-  animation: moveUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fadeOut 4s ease-in 15s forwards;
+  animation: moveUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fadeOut 2s ease-in 1s forwards;
+  animation-delay: 0.4s;
+} 
+
+.intro-blurb.autodot .dot-1::after {
+  background-color: #0078FC;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  animation: moveUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fadeOut 2s ease-in 1s forwards;
+  animation-delay: 0.4s;
+}
+
+.intro-blurb.autodot .dot-2::after {
+  background-color: #FF6A59;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  animation: moveUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fadeOut 2s ease-in 1s forwards;
   animation-delay: 0.4s;
 }
 
@@ -214,7 +231,7 @@ h5 {
   0% {
     opacity: 1;
   }
-  60% {
+  90% {
     opacity: 1;
   }
   100% {
@@ -223,8 +240,7 @@ h5 {
 }
 
 
-
-/* Hero - Dotted Line Animation */
+/* Hero - Dashed Line Animation */
 .line-container {
   display: flex;
   align-items: center;
@@ -237,13 +253,23 @@ h5 {
 }
 
 .intro-blurb:hover .dashed-line__path {
-  animation: dashed-line-path 1s ease-in forwards;
-  animation-delay: 1.4s;
+  animation: dashed-line-path 600ms ease-in forwards, dashed-line-fadeOutPath 1.2s ease-in 1s forwards;
+  animation-delay: 1.2s;
   fill: none;
   stroke: #B4B4B4;
-  stroke-dasharray: 190; /* This is the length of the line */
-  stroke-dashoffset: 190; /* This is the length of the line */
+  stroke-dasharray: 189; /* This is the length of the line */
+  stroke-dashoffset: 189; /* This is the length of the line */
   stroke-width: 5; /* Adjust the stroke width as needed */
+}
+
+.autoline .dashed-line__path {
+  animation: dashed-line-path 600ms ease-in forwards, dashed-line-fadeOutPath 925ms ease-in 1s forwards;
+  animation-delay: 1.2s;
+  fill: none;
+  stroke: #B4B4B4;
+  stroke-dasharray: 189;
+  stroke-dashoffset: 189;
+  stroke-width: 5;
 }
 
 .dashed-line__dash {
@@ -255,12 +281,25 @@ h5 {
 
 @keyframes dashed-line-path {
   from {
-      stroke-dashoffset: 185;
+      stroke-dashoffset: 189;
   }
   to {
       stroke-dashoffset: 0;
   }
 }
+
+@keyframes dashed-line-fadeOutPath {
+  0% {
+    stroke-opacity: 1;
+  }
+  90% {
+    stroke-opacity: 1;
+  }
+  100% {
+    stroke-opacity: 0;
+  }
+}
+
 
 /* Hero - Arrow */
 .arrow-container {
@@ -294,6 +333,7 @@ h5 {
   }
   }
 
+  
 /* Project Textbox - Left Alignment */
 .project-left-textbox {
   background-color: #FFFFFF;
@@ -336,28 +376,3 @@ footer {
   margin-bottom: 48px;
   text-align: center;
 }
-
-
-
-
-
-/* Test 
-.intro-blurb.page-load .dot-1::after {
-  animation: moveUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  animation-delay: 0.4s;
-}
-
-.intro-blurb.page-load .dot-2::after {
-  animation: moveUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  animation-delay: 0.4s;
-}
-
-.intro-blurb.page-load .dashed-line__path {
-  animation: dashed-line-path 1s ease-in forwards;
-  animation-delay: 1.4s;
-  fill: none;
-  stroke: #B4B4B4;
-  stroke-dasharray: 190;
-  stroke-dashoffset: 190;
-  stroke-width: 5;
-} */
