@@ -1,4 +1,5 @@
 /* Reset CSS */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,60 +8,106 @@
 
 
 /* General */
+
 body {
   background-color: #FFFFFF;
-  font-family: 'Figtree', sans-serif;}
+  font-family: 'Figtree', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
 
 
 /* Typography */
-h1, h2, h3, h4, h5, .large-body {
+
+h1,
+h2,
+h3,
+h4 {
   color: #000;
   font-weight: 400;
 }
 
-h1 { font-size: 4.209rem; letter-spacing: -1.5px; }
-h2 { font-size: 2.369rem; }
-h3 { font-size: 1.777rem; }
-h4 { font-size: 1.333rem;}
-h5 { font-size: 0.75rem; }
-p { font-size: 1rem; }
+h1 {
+  font-size: 4.209rem;
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  font-size: 2.369rem;
+}
+
+h3 {
+  font-size: 1.777rem;
+}
+
+h4 {
+  font-size: 1.333rem;
+}
 
 
-/* Navigation Bar */
-.logo { max-height: 74px; float: left; }
+/* Navigation Bar ------------------------------------------------------------------------------------------------------------------------------------- */
 
 .navbar {
-  font-size: 1.777rem;
-  font-weight: 700;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 7.5rem;
+  margin: 4rem;
 }
 
-.navbar ul { list-style-type: none; display: flex; }
-.navbar li { padding: 3rem; }
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  white-space: nowrap;
+}
+
 .navbar a {
   text-decoration: none;
   color: black;
-  position: relative;
+}
+
+.about-margin {
+  margin-left: 6rem;
+}
+
+.work-margin {
+  margin-left: 6rem;
+}
+
+.pressed {
+  opacity: 50%;
 }
 
 
-/* Navigation Bar - Work and About Dot Highlights*/
-.work-letter, .about-letter {
-  position:relative;
+/* Work and About Dot Highlights */
+
+.work-letter,
+.about-letter {
+  position: relative;
   display: inline-block;
 }
 
-.work-letter::after, .about-letter::after {
+.work-letter::after,
+.about-letter::after {
   content: "";
   position: absolute;
   width: 1.4rem;
   height: 1.4rem;
   border-radius: 50%;
-  bottom: 0.35rem;
+  bottom: 0.37rem;
   opacity: 0;
 }
 
@@ -78,43 +125,9 @@ p { font-size: 1rem; }
   opacity: 1;
 }
 
-.pressed { opacity: 50%; }
 
-@media only screen and (max-width: 430px) {
-  .logo {
-      max-width: 50px;
-  }
+/* Hero ------------------------------------------------------------------------------------------------------------------------------------------- */
 
-  .navbar {
-      padding: 1rem 1.5rem; /* Adjust padding for better spacing on mobile devices */
-  }
-
-  .navbar li {
-      padding: 1.5rem;
-      align-items: center;
-      display:flex; 
-  }
-
-  .navbar a {
-      font-size: 1.25rem; /* Set the font size for "About" and "Work" on mobile devices */
-  }
-
-  .work-letter::after,
-  .about-letter::after {
-    top: 0.25rem;
-    width: 1rem; /* Adjust the width as needed */
-    height: 1rem; /* Adjust the height as needed */
-  }
-  
-  .navbar a.pressed .work-letter::after,
-  .navbar a.pressed .about-letter::after {
-    opacity: 1;
-  }
-}
-
-
-
-/* Hero - Text*/
 .hero {
   display: flex;
   flex-direction: column;
@@ -124,40 +137,47 @@ p { font-size: 1rem; }
   margin: auto;
 }
 
-.greeting {
-  opacity: 0; 
+.hero h1 {
+  margin-top: 20%;
+  margin-bottom: 5%;
+}
+
+.greeting,
+.intro-blurb {
+  opacity: 0;
   transform: translateY(1rem);
   animation: fadeInUp 0.6s forwards;
   animation-delay: 0.5s;
 }
 
 .intro-blurb {
-  opacity: 0; 
-  transform: translateY(2.5rem); 
-  animation: fadeInUp 0.6s forwards; 
-  animation-delay: 1700ms; 
-  min-width: 31.25rem;
-} 
+  animation-delay: 1.7s;
+  /* min-width: 31.25em; */
+}
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(1.25rem); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.hero h1 { /* Adjust the space within the hero */
-  margin-top: 6rem;
-  margin-bottom: 2rem;
+
+/* Dot Bounce Animation */
+
+.dot-1,
+.dot-2 {
+  position: relative;
+  display: inline-block;
 }
 
-.hero h3 { /* Adjust the space within the hero */
-  margin: top 2rem;
-}
-
-
-/* Hero - Dot Bounce Animation */
-.dot-1, .dot-2 { position: relative; display: inline-block; }
-
-.dot-1::after, .dot-2::after {
+.dot-1::after,
+.dot-2::after {
   content: "";
   position: absolute;
   width: 1rem;
@@ -165,18 +185,22 @@ p { font-size: 1rem; }
   border-radius: 50%;
   bottom: 0.4rem;
   opacity: 0;
-  transition: background-color 0.1s; 
 }
 
-.intro-blurb.autodot .dot-1::after, .intro-blurb:hover .dot-1::after {
+.intro-blurb.autodot .dot-1::after,
+.intro-blurb:hover .dot-1::after {
   background-color: #0078FC;
 }
 
-.intro-blurb.autodot .dot-2::after, .intro-blurb:hover .dot-2::after {
+.intro-blurb.autodot .dot-2::after,
+.intro-blurb:hover .dot-2::after {
   background-color: #FF6A59;
 }
 
-.intro-blurb.autodot .dot-1::after, .intro-blurb:hover .dot-1::after, .intro-blurb.autodot .dot-2::after, .intro-blurb:hover .dot-2::after  {
+.intro-blurb.autodot .dot-1::after,
+.intro-blurb:hover .dot-1::after,
+.intro-blurb.autodot .dot-2::after,
+.intro-blurb:hover .dot-2::after {
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
@@ -185,122 +209,176 @@ p { font-size: 1rem; }
 }
 
 @keyframes moveUp {
-  0% { transform: translate(-50%, 0); }
-  30% { transform: translate(-50%, -2.5rem); }
-  40% { transform: translate(-50%, -1.875rem); }
-  50% { transform: translate(-50%, -2.1875rem); }
-  55% { transform: translate(-50%, -1.875rem); }
-  100% { transform: translate(-50%, -1.875rem); }
+  0% {
+    transform: translate(-50%, 0);
+  }
+
+  30% {
+    transform: translate(-50%, -2.5rem);
+  }
+
+  40% {
+    transform: translate(-50%, -1.875rem);
+  }
+
+  50% {
+    transform: translate(-50%, -2.1875rem);
+  }
+
+  55% {
+    transform: translate(-50%, -1.875rem);
+  }
+
+  100% {
+    transform: translate(-50%, -1.875rem);
+  }
 }
 
 @keyframes fadeOut {
-  0% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 
-/* Hero - Dashed Line Animation */
-.line-container { display: flex; align-items: center; justify-content: center; }
+/* Dashed Line Animation */
+
+.line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .dashed-line {
-  margin-left: 6.3rem; margin-bottom: 0.4rem; }
+  margin-left: -22.5rem;
+  margin-bottom: 0.4rem;
+}
 
-.autoline .dashed-line__path, .intro-blurb:hover .dashed-line__path {
+.autoline .dashed-line__path,
+.intro-blurb:hover .dashed-line__path {
   animation: dashed-line-path 600ms ease-in forwards, dashed-line-fadeOutPath 1.2s ease-in 1s forwards;
   animation-delay: 1.2s;
   fill: none;
   stroke: #B4B4B4;
-  stroke-dasharray: 11.8125rem; /* This is the length of the line */
-  stroke-dashoffset: 11.8125rem; /* This is the length of the line */
-  stroke-width: 0.3125rem; /* Adjust the stroke width as needed */
-  }
+  stroke-dasharray: 11.8125rem;
+  /* This is the length of the line */
+  stroke-dashoffset: 11.8125rem;
+  /* This is the length of the line */
+  stroke-width: 0.3125rem;
+  /* Adjust the stroke width as needed */
+}
 
 .dashed-line__dash {
   fill: none;
-  stroke: #FFFFFF; 
-  stroke-dasharray: 0.125rem 0.5rem;; /* Draws a 0.5rem dash line with a 0.125rem gap between */
-  stroke-width: 0.5rem; /* Make the dashed line slightly bigger than the one it's covering */
+  stroke: #FFFFFF;
+  stroke-dasharray: 0.125rem 0.5rem;
+  ;
+  /* Draws a 0.5rem dash line with a 0.125rem gap between */
+  stroke-width: 0.5rem;
+  /* Make the dashed line slightly bigger than the one it's covering */
 }
 
 @keyframes dashed-line-path {
-  from { stroke-dashoffset: 11.8125rem; }
-  to { stroke-dashoffset: 0; }
+  from {
+    stroke-dashoffset: 11.8125rem;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes dashed-line-fadeOutPath {
-  0% { stroke-opacity: 1; }
-  90% { stroke-opacity: 1; }
-  100% { stroke-opacity: 0; }
+  0% {
+    stroke-opacity: 1;
+  }
+
+  90% {
+    stroke-opacity: 1;
+  }
+
+  100% {
+    stroke-opacity: 0;
+  }
 }
 
 
-/* Hero - Arrow */
+/* Arrow SVG */
+
 .arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
   position: relative;
-  width: 3.5rem;
-  height: 4.375rem;
-  margin-top: 5rem;
-  margin-bottom: 6.5rem;
 }
 
 .background-circle {
   position: absolute;
-  top: 0;
-  left: 0;
-  }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .moving-arrow {
   position: absolute;
-  top: 0;
-  left: 0;
   animation: moveUpDown 0.6s linear infinite alternate;
   transform-origin: center;
-  }
+}
 
 @keyframes moveUpDown {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(0.375rem); }
+  0% {
+    transform: translateY(0);
   }
 
+  100% {
+    transform: translateY(0.375rem);
+  }
+}
 
-/* Projects */
+
+/* Projects ----------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Container for All Projects */
+
 .projects {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5rem;
+  padding: 4rem;
 }
 
 
+/* Container for Thumbnail Text and Image */
 
-/* Project Thumbnail - All Content */
 .thumbnail-content {
   display: inline-flex;
   align-items: center;
   gap: 5rem;
   padding: 4.5rem;
+  overflow: auto;
 }
 
-/* Project Thumbnail - Text Container */
-.thumbnail-text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 1rem;
-  max-width: 31.25rem;
-}
 
-/* Project Thumbnail - Text Container-  Header */
-.thumbnail-header {
+/* Thumbnail Text */
+
+.subheader {
   display: flex;
   align-items: center;
   gap: 1rem;
   text-transform: uppercase;
-  }
+}
 
-/* Project Thumbnail -Text Container- Headline & CTA */
 .headline-cta {
   display: flex;
   flex-direction: column;
@@ -310,7 +388,18 @@ p { font-size: 1rem; }
   align-self: stretch;
 }
 
-/* Project Thumbnail - Button */
+.thumbnail-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1rem;
+  max-width: 31.25rem;
+}
+
+
+/* CTA Button */
+
 .button {
   border-radius: 0.25rem;
   color: white;
@@ -323,7 +412,8 @@ p { font-size: 1rem; }
 }
 
 
-/* Ripple and Surge Thumbnail */
+/* Ripple and Surge ---------------------------------------------------------------------------------------------------------------------------------------- */
+
 #ripple-and-surge {
   background-color: #E3B08C;
 }
@@ -344,7 +434,8 @@ p { font-size: 1rem; }
 }
 
 
-/* Pivot Thumbnail */
+/* Pivot --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 #pivot {
   background-color: #9FCFFF;
 }
@@ -366,6 +457,105 @@ p { font-size: 1rem; }
 }
 
 
+/* Footer ----------------------------------------------------------------*/
+footer {
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
 
-/* Footer */
-footer { margin-top: 10rem; margin-bottom: 3rem; text-align: center; }
+
+
+
+
+/* Mobile Media Query ------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+  /* Typography */
+
+  h1 {
+    font-size: 2.369rem;
+  }
+
+  h2 {
+    font-size: 1.777rem;
+  }
+
+  h3 {
+    font-size: 1.333rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+
+  /* Navigation Bar */
+
+  .logo {
+    width: 60px;
+  }
+
+  .navbar {
+    margin: 2rem;
+  }
+
+  .about-margin {
+    margin-left: 1.5rem;
+  }
+
+  .work-margin {
+    margin-left: 2.5rem; 
+  }
+
+  /* Disable hover effects */
+  .navbar a:hover .work-letter::after,
+  .navbar a:hover .about-letter::after {
+    background-color: transparent;
+    opacity: 0;
+  }
+
+  /* Hero */
+
+  .hero h3 {
+    /* Adjust the space within the hero */
+    padding: 0rem 2rem;
+  }
+
+
+
+  /* Dot Bounce Animation */
+  .dot-1::after,
+  .dot-2::after {
+    width: 0.77rem;
+    height: 0.77rem;
+    bottom: 0.27rem;
+  }
+
+  @keyframes moveUp {
+    0% {
+      transform: translate(-50%, 0);
+    }
+
+    30% {
+      transform: translate(-50%, -1.75rem);
+    }
+
+    40% {
+      transform: translate(-50%, -1.3125rem);
+    }
+
+    50% {
+      transform: translate(-50%, -1.53125rem);
+    }
+
+    55% {
+      transform: translate(-50%, -1.3125rem);
+    }
+
+    100% {
+      transform: translate(-50%, -1.3125rem);
+    }
+  }
+}

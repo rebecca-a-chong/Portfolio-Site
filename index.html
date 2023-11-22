@@ -6,7 +6,7 @@
     <title>Rebecca Chong</title>
     <link rel="icon" href="img/Favicon.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hi! I'm Rebecca. I'm a UX Designer connecting the dots between user-centricity and business strategy.">
+    <meta name="description" content="Hi! I'm Rebecca. I'm connecting the dots between user-centricity and business strategy as a UX Designer.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,19 +19,19 @@
         <div class="navbar">
             <img src="img/New Logo.png" alt="Personal Logo" class="logo">
             <ul>
-                <li><a href="index.html">W<span class="work-letter">o</span>rk</a></li>
-                <li><a href="#">Ab<span class="about-letter">o</span>ut</a></li>
+                <li class="work-margin"><h3><strong><a href="#" class="pressableElement">W<span class="work-letter">o</span>rk</a></strong></h3></li>
+                <li class="about-margin"><h3><strong><a href="#" class="pressableElement">Ab<span class="about-letter">o</span>ut</a></strong></h3></li>
             </ul>
         </div>
     </header>
 
     <main>
         <div class="hero">
-            <h1 class="greeting">Hi, I'm <strong>Rebecca!</strong></h1>
+            <h1 class="greeting">Hi, I'm Rebecca!</h1>
 
             <div class="intro-blurb" id="intro-blurb">
                 <div class="line-container">
-                    <svg class="dashed-line" width="189" height="5" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="dashed-line" width="152" height="5" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <path id="dashed-line" d="M0 1 L189 1" />
                         </defs>
@@ -41,7 +41,7 @@
                         <use class="dashed-line__dash" xlink:href="#dashed-line" />
                     </svg>
                 </div>
-                <h3> I'm a UX Designer c<span class="dot-1">o</span>nnecting the d<span class="dot-2">o</span>ts between user-centricity and business strategy.</h3>
+                <h3>I c<span class="dot-1">o</span>nnect the d<span class="dot-2">o</span>ts between user-centricity and business strategy as a <strong>UX Designer</strong>.</h3>
             </div>
 
             <div class="arrow-container">
@@ -55,11 +55,11 @@
             </div>
         </div>
 
-        <div class="projects">
+        <!-- <div class="projects">
             <div class="thumbnail-content" id="ripple-and-surge">
                 <img src="img/Ripple and Surge Mockup.png" alt="Ripple and Surge Thumbnail Image">
                 <div class="thumbnail-text-container">    
-                    <div class="thumbnail-header">
+                    <div class="subheader">
                         <h4>Ripple and Surge</h4>
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
                             <circle cx="4" cy="4.5" r="4" fill="black"/>
@@ -71,11 +71,11 @@
                         <div class="button">Read Case Study</div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="thumbnail-content" id="pivot">
+            <!-- <div class="thumbnail-content" id="pivot">
                 <div class="thumbnail-text-container">    
-                    <div class="thumbnail-header">
+                    <div class="subheader">
                         <h4>Pivot</h4>
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
                             <circle cx="4" cy="4.5" r="4" fill="black"/>
@@ -88,24 +88,25 @@
                     </div>
                 </div>
                 <img src="img/Pivot Mockup.png" alt="Pivot Thumbnail Image">
-            </div>
+            </div> -->
         </div>
     </main>
 
     <footer>
-        <h5>Developed & designed by Rebecca Chong © 2023 </h5>
+        <p>Developed & designed by Rebecca Chong © 2023 </p>
     </footer>
 
     <script>
+        // Autoplay Dot/Line Animation
         window.addEventListener("load", function () {
             const introBlurb = document.getElementById("intro-blurb");
             setTimeout(function () {
                 introBlurb.classList.add("autodot");
-            }, 3000); // Adjust the delay time (in milliseconds) as needed
+            }, 3000); // Delay time (in milliseconds)
 
             setTimeout(function () {
                 introBlurb.classList.add("autoline");
-            }, 3000); // Adjust the delay time (in milliseconds) as needed
+            }, 3000); // Delay time (in milliseconds)
 
             introBlurb.addEventListener("animationend", (event) => {
                 if (event.animationName === "dashed-line-fadeOutPath") {
@@ -113,8 +114,23 @@
                 }
             });
         });
-    </script>
 
+        // Navigation Bar - Change Style on Press
+        const pressableElements = document.querySelectorAll('.pressableElement');
+            pressableElements.forEach(element => {
+            element.addEventListener('mousedown', () => {
+                element.classList.add('pressed');
+            });
+
+            element.addEventListener('mouseup', () => {
+                element.classList.remove('pressed');
+            });
+
+            element.addEventListener('mouseleave', () => {
+                element.classList.remove('pressed');
+            });
+        });//
+    </script>
 
 </body>
 
