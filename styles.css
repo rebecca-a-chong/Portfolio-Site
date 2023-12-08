@@ -1,32 +1,23 @@
-/* Reset CSS */
+/* General --------------------------------------------------------------------- */
 
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-/* General */
-
-body {
-  background-color: #FFFFFF;
-  font-family: 'Figtree', sans-serif;
-  width: 100%;
-  height: 100%;
-}
+/* Typography */
 
 html {
   font-size: 16px;
 }
 
-
-/* Typography */
-
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   color: #000;
   font-weight: 400;
 }
@@ -48,6 +39,19 @@ h4 {
   font-size: 1.333rem;
 }
 
+h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Misc */
+
+body {
+  background-color: #FFFFFF;
+  font-family: 'Figtree', sans-serif;
+  width: 100%;
+  height: 100%;
+}
 
 /* Navigation Bar ------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -92,7 +96,7 @@ h4 {
 }
 
 
-/* Work and About Dot Highlights */
+/* Navigation Bar Dots */
 
 .work-letter,
 .about-letter {
@@ -139,7 +143,7 @@ h4 {
 
 .hero h1 {
   margin-top: 20%;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 .greeting,
@@ -152,7 +156,7 @@ h4 {
 
 .intro-blurb {
   animation-delay: 1.7s;
-  /* min-width: 31.25em; */
+  min-width: 22.5rem;
 }
 
 @keyframes fadeInUp {
@@ -180,10 +184,10 @@ h4 {
 .dot-2::after {
   content: "";
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  bottom: 0.4rem;
+  bottom: 0.35rem;
   opacity: 0;
 }
 
@@ -251,15 +255,9 @@ h4 {
 
 /* Dashed Line Animation */
 
-.line-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .dashed-line {
-  margin-left: -22.5rem;
-  margin-bottom: 0.4rem;
+  margin-left: -55.5%;
+  margin-bottom: 0.1rem;
 }
 
 .autoline .dashed-line__path,
@@ -268,27 +266,27 @@ h4 {
   animation-delay: 1.2s;
   fill: none;
   stroke: #B4B4B4;
-  stroke-dasharray: 11.8125rem;
+  stroke-dasharray: 189px;
   /* This is the length of the line */
-  stroke-dashoffset: 11.8125rem;
+  stroke-dashoffset: 189px;
   /* This is the length of the line */
-  stroke-width: 0.3125rem;
+  stroke-width: 6px;
   /* Adjust the stroke width as needed */
 }
 
 .dashed-line__dash {
   fill: none;
   stroke: #FFFFFF;
-  stroke-dasharray: 0.125rem 0.5rem;
+  stroke-dasharray: 2px 8px;
   ;
-  /* Draws a 0.5rem dash line with a 0.125rem gap between */
-  stroke-width: 0.5rem;
+  /* Draws a 8px dash line with a 2px gap between */
+  stroke-width: 8px;
   /* Make the dashed line slightly bigger than the one it's covering */
 }
 
 @keyframes dashed-line-path {
   from {
-    stroke-dashoffset: 11.8125rem;
+    stroke-dashoffset: 189px;
   }
 
   to {
@@ -317,15 +315,8 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20vh;
+  height: 20rem;
   position: relative;
-}
-
-.background-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .moving-arrow {
@@ -354,8 +345,8 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
-  padding: 4rem;
+  gap: 2rem;
+  margin: 4rem;
 }
 
 
@@ -364,9 +355,22 @@ h4 {
 .thumbnail-content {
   display: inline-flex;
   align-items: center;
-  gap: 5rem;
-  padding: 4.5rem;
-  overflow: auto;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 4rem;
+  justify-content: center;
+  height: 100%;
+}
+
+.thumbnail-content img {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center center;
+  max-width: 100%;
+  height: auto;
+}
+
+.thumbnail-content:hover img {
+  transform: scale(1.05);
 }
 
 
@@ -375,6 +379,7 @@ h4 {
 .subheader {
   display: flex;
   align-items: center;
+  justify-content: space-evenly; 
   gap: 1rem;
   text-transform: uppercase;
 }
@@ -408,11 +413,11 @@ h4 {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.333rem;
+  font-size: 1rem;
 }
 
 
-/* Ripple and Surge ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* Ripple and Surge ---------------------------------------------------------------------------------------------------------------------------- */
 
 #ripple-and-surge {
   background-color: #E3B08C;
@@ -427,14 +432,12 @@ h4 {
 }
 
 #ripple-and-surge img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  max-width: 37rem;
-  max-height: 21.94rem;
 }
 
 
-/* Pivot --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Pivot ------------------------------------------------------------------------------------------------------------------------------------- */
 
 #pivot {
   background-color: #9FCFFF;
@@ -449,19 +452,18 @@ h4 {
 }
 
 #pivot img {
-  width: 100%;
+  max-width: calc(100% - 103px);
   height: auto;
-  max-width: 30.5625rem;
-  max-height: 26.5rem;
-  margin-right: 6.625rem;
+  margin: 0 51.5px;
 }
 
 
 /* Footer ----------------------------------------------------------------*/
 footer {
-  margin-top: 10rem;
-  margin-bottom: 3rem;
+  display: flex;
+  margin: 10rem 6rem 3rem 6rem;
   text-align: center;
+  justify-content: center;
 }
 
 
@@ -472,7 +474,11 @@ footer {
 
 @media (max-width: 600px) {
 
-  /* Typography */
+  html {
+    font-size: 14px;
+  }
+
+  /* Typography ----------------------------------------------------- */
 
   h1 {
     font-size: 2.369rem;
@@ -490,11 +496,15 @@ footer {
     font-size: 1rem;
   }
 
+  h5 {
+    font-size: 0.75rem;
+  }
 
-  /* Navigation Bar */
+
+  /* Navigation Bar ------------------------------------------------- */
 
   .logo {
-    width: 60px;
+    width: 3.75rem;
   }
 
   .navbar {
@@ -506,31 +516,34 @@ footer {
   }
 
   .work-margin {
-    margin-left: 2.5rem; 
+    margin-left: 2.5rem;
   }
 
-  /* Disable hover effects */
+  /* Disable Hover Effects */
   .navbar a:hover .work-letter::after,
   .navbar a:hover .about-letter::after {
     background-color: transparent;
     opacity: 0;
   }
 
-  /* Hero */
+
+  /* Hero ------------------------------------------------------- */
 
   .hero h3 {
-    /* Adjust the space within the hero */
-    padding: 0rem 2rem;
+    margin: 0rem 2rem 2rem 2rem;
   }
 
+  .intro-blurb {
+    max-width: 300px;
+  }
 
 
   /* Dot Bounce Animation */
   .dot-1::after,
   .dot-2::after {
-    width: 0.77rem;
-    height: 0.77rem;
-    bottom: 0.27rem;
+    width: 11px;
+    height: 11px;
+    bottom: 4px;
   }
 
   @keyframes moveUp {
@@ -558,4 +571,65 @@ footer {
       transform: translate(-50%, -1.3125rem);
     }
   }
+
+  /* Dashed Line Animation */
+  .dashed-line {
+    margin-left: -24%;
+    margin-bottom: -0.1rem;
+    max-width: 100px;
+  }
+
+  /* Arrow SVG */
+  .arrow-container {
+    height: 15rem;
+  }
+
+  .background-circle,
+  .moving-arrow {
+    width: 45px;
+    height: 56px;
+  }
+
+
+
+  /* Projects --------------------------------------------------------------------------- */
+
+  .projects {
+    margin: 2rem;
+  }
+  
+  .thumbnail-content {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+    overflow: auto;
+  }
+
+  .subheader {
+    gap: 0.5rem;
+    white-space: nowrap;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+
+  .thumbnail-content img {
+    transition: none;
+    transform: none;
+  }
+
+  .thumbnail-content:hover img {
+    transform: none;
+  }
+
+  #pivot img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 0; 
+  }
+  
+
 }
