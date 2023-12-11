@@ -53,6 +53,7 @@ body {
   height: 100%;
 }
 
+
 /* Navigation Bar ------------------------------------------------------------------------------------------------------------------------------------- */
 
 .navbar {
@@ -376,10 +377,19 @@ body {
 
 /* Thumbnail Text */
 
+.thumbnail-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1rem;
+  max-width: 31.25rem;
+}
+
 .subheader {
   display: flex;
   align-items: center;
-  justify-content: space-evenly; 
+  justify-content: space-evenly;
   gap: 1rem;
   text-transform: uppercase;
 }
@@ -391,15 +401,6 @@ body {
   align-items: flex-start;
   gap: 3rem;
   align-self: stretch;
-}
-
-.thumbnail-text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 1rem;
-  max-width: 31.25rem;
 }
 
 
@@ -432,7 +433,7 @@ body {
 }
 
 #ripple-and-surge img {
-  max-width: 100%;
+  max-width: 40%;
   height: auto;
 }
 
@@ -452,9 +453,8 @@ body {
 }
 
 #pivot img {
-  max-width: calc(100% - 103px);
+  max-width: 40%;
   height: auto;
-  margin: 0 51.5px;
 }
 
 
@@ -469,16 +469,15 @@ footer {
 
 
 
-
 /* Mobile Media Query ------------------------------------------------------------------------------------------------------------- */
 
 @media (max-width: 600px) {
 
+  /* Typography ----------------------------------------------------- */
+
   html {
     font-size: 14px;
   }
-
-  /* Typography ----------------------------------------------------- */
 
   h1 {
     font-size: 2.369rem;
@@ -520,17 +519,23 @@ footer {
   }
 
   /* Disable Hover Effects */
+
   .navbar a:hover .work-letter::after,
   .navbar a:hover .about-letter::after {
     background-color: transparent;
     opacity: 0;
   }
 
+  /* Remove Dot Effect for Mobile */
+  .work-letter::after,
+  .about-letter::after {
+    display: none;
+  }
 
   /* Hero ------------------------------------------------------- */
 
   .hero h3 {
-    margin: 0rem 2rem 2rem 2rem;
+    margin: 0rem 2rem 0rem 2rem;
   }
 
   .intro-blurb {
@@ -539,6 +544,7 @@ footer {
 
 
   /* Dot Bounce Animation */
+
   .dot-1::after,
   .dot-2::after {
     width: 11px;
@@ -573,13 +579,15 @@ footer {
   }
 
   /* Dashed Line Animation */
+
   .dashed-line {
     margin-left: -24%;
-    margin-bottom: -0.1rem;
+    margin-bottom: -0.2rem;
     max-width: 100px;
   }
 
   /* Arrow SVG */
+
   .arrow-container {
     height: 15rem;
   }
@@ -591,25 +599,23 @@ footer {
   }
 
 
-
   /* Projects --------------------------------------------------------------------------- */
 
   .projects {
     margin: 2rem;
   }
-  
+
   .thumbnail-content {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
     padding: 3rem;
-    overflow: auto;
   }
 
   .subheader {
-    gap: 0.5rem;
-    white-space: nowrap;
+    gap: 0.45rem;
+  }
+
+  .dot-divider {
+    width: 5px;
+    height: 6px;
   }
 
   .button {
@@ -625,11 +631,189 @@ footer {
     transform: none;
   }
 
-  #pivot img {
-    max-width: 100%;
-    height: auto;
-    margin: 0 0; 
-  }
-  
+  /* Ripple and Surge ---------------------------------------------------*/
 
+  #ripple-and-surge img {
+    min-width: 100%;
+  }
+
+  /* Pivot ---------------------------------------------------*/
+
+  #pivot img {
+    order: 1;
+    /* Set the default order for mobile layout */
+    min-width: 100%;
+  }
+
+  #pivot .thumbnail-text-container {
+    order: 2;
+  }
+}
+
+
+/* Tablet Media Query ------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1195px) and (min-width: 601px) {
+
+  html {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2.369rem;
+  }
+
+  h2 {
+    font-size: 1.777rem;
+  }
+
+  h3 {
+    font-size: 1.333rem;
+  }
+
+  h4 {
+    font-size: 1.333rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+
+  /* Navigation Bar ------------------------------------------------- */
+
+  .logo {
+    width: 5rem;
+  }
+
+  .navbar {
+    margin: 3rem;
+  }
+
+  .about-margin {
+    margin-left: 4rem;
+  }
+
+  .work-margin {
+    margin-left: 2.5rem;
+  }
+
+  /* Disable Hover Effects */
+  .navbar a:hover .work-letter::after,
+  .navbar a:hover .about-letter::after {
+    background-color: transparent;
+    opacity: 0;
+  }
+
+  /* Remove Dot Effect for Tablet */
+  .work-letter::after,
+  .about-letter::after {
+    display: none;
+  }
+
+  /* Hero ------------------------------------------------------- */
+
+  .hero h3 {
+    margin: 0rem 1rem 2rem 1rem;
+  }
+
+  .intro-blurb {
+    max-width: 500px;
+  }
+
+  /* Dot Bounce Animation */
+
+  .dot-1::after,
+  .dot-2::after {
+    width: 12px;
+    height: 12px;
+    bottom: 4px;
+  }
+
+  @keyframes moveUp {
+    0% {
+      transform: translate(-50%, 0);
+    }
+
+    30% {
+      transform: translate(-50%, -1.75rem);
+    }
+
+    40% {
+      transform: translate(-50%, -1.3125rem);
+    }
+
+    50% {
+      transform: translate(-50%, -1.53125rem);
+    }
+
+    55% {
+      transform: translate(-50%, -1.3125rem);
+    }
+
+    100% {
+      transform: translate(-50%, -1.3125rem);
+    }
+  }
+
+  /* Dashed Line Animation */
+
+  .dashed-line {
+    margin-left: -54%;
+    margin-bottom: -0.15rem;
+    max-width: 114px;
+  }
+
+  /* Arrow SVG */
+
+  .arrow-container {
+    height: 15rem;
+  }
+
+
+  /* Projects --------------------------------------------------------------------------- */
+
+  .projects {
+    margin: 3rem;
+  }
+
+  .subheader {
+    gap: 0.75rem;
+  }
+
+  .dot-divider {
+    width: 8px;
+    height: 8px;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+
+  .thumbnail-content img {
+    transition: none;
+    transform: none;
+  }
+
+  .thumbnail-content:hover img {
+    transform: none;
+  }
+
+  /* Ripple and Surge ---------------------------------------------------*/
+
+  #ripple-and-surge img {
+    max-width: 60%;
+  }
+
+  /* Pivot ---------------------------------------------------*/
+
+  #pivot img {
+    order: 1;
+    max-width: 60%;
+  }
+
+  #pivot .thumbnail-text-container {
+    order: 2;
+  }
 }
