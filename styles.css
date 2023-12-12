@@ -433,7 +433,8 @@ body {
 }
 
 #ripple-and-surge img {
-  max-width: 40%;
+  max-width: 35%;
+  min-width: 420px;
   height: auto;
 }
 
@@ -453,7 +454,8 @@ body {
 }
 
 #pivot img {
-  max-width: 40%;
+  max-width: 35%;
+  min-width: 420px;
   height: auto;
 }
 
@@ -634,7 +636,8 @@ footer {
   /* Ripple and Surge ---------------------------------------------------*/
 
   #ripple-and-surge img {
-    min-width: 100%;
+    max-width: 100%;
+    min-width: 180px;
   }
 
   /* Pivot ---------------------------------------------------*/
@@ -642,7 +645,8 @@ footer {
   #pivot img {
     order: 1;
     /* Set the default order for mobile layout */
-    min-width: 100%;
+    max-width: 100%;
+    min-width: 180px;
   }
 
   #pivot .thumbnail-text-container {
@@ -653,7 +657,7 @@ footer {
 
 /* Tablet Media Query ------------------------------------------------------------------------------------------------------------- */
 
-@media (max-width: 1195px) and (min-width: 601px) {
+@media (max-width: 1270px) and (min-width: 601px) {
 
   html {
     font-size: 16px;
@@ -804,6 +808,8 @@ footer {
 
   #ripple-and-surge img {
     max-width: 60%;
+    min-width: 420px;
+    height: auto;
   }
 
   /* Pivot ---------------------------------------------------*/
@@ -811,6 +817,7 @@ footer {
   #pivot img {
     order: 1;
     max-width: 60%;
+    min-width: 420px;
   }
 
   #pivot .thumbnail-text-container {
