@@ -360,7 +360,7 @@ body {
   gap: 4rem;
   padding: 4rem;
   justify-content: center;
-  height: 100%;
+  max-width: 80rem;
 }
 
 .thumbnail-content img {
