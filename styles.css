@@ -194,6 +194,7 @@ body {
   border-radius: 50%;
   bottom: 0.38rem;
   opacity: 0;
+  z-index: 2;
 }
 
 .intro-blurb.autodot .dot-1::after,
@@ -264,7 +265,6 @@ body {
 .dashed-line {
   margin-left: -55.5%;
   margin-bottom: 0.12rem;
-  z-index: 1;
 }
 
 .autoline .dashed-line__path,
