@@ -7,15 +7,10 @@
     <link rel="icon" href="img/Favicon.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Hi! I'm Rebecca. I'm connecting the dots between user-centricity and business strategy as a UX Designer.">
+        content="Hi! I'm Rebecca. I connect the dots between user-centricity and business strategy as a UX Designer.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 </head>
 
 <body>
@@ -35,6 +30,7 @@
             </ul>
         </div>
     </header>
+
 
     <main>
         <div class="hero">
@@ -68,11 +64,11 @@
             </div>
         </div>
 
-        <div class="projects">
+        <div class="project-container">
             <div class="thumbnail-content" id="ripple-and-surge">
                 <img src="img/Ripple and Surge Thumbnail.png" alt="Ripple and Surge Thumbnail Image">
                 <div class="thumbnail-text-container">
-                    <div class="subheader">
+                    <div class="thumbnail-subheader">
                         <h5>Ripple & Surge</h5>
                         <svg class="dot-divider" xmlns="http://www.w3.org/2000/svg" width="8" height="8"
                             viewBox="0 0 8 9" fill="none">
@@ -80,7 +76,7 @@
                         </svg>
                         <h5>Web Design</h5>
                     </div>
-                    <div class="headline-cta">
+                    <div class="thumbnail-headline-cta">
                         <h2><strong>Elevating user trust with a polished web presence</strong></h2>
                         <div class="button">Read Case Study</div>
                     </div>
@@ -89,7 +85,7 @@
 
             <div class="thumbnail-content" id="pivot">
                 <div class="thumbnail-text-container">
-                    <div class="subheader">
+                    <div class="thumbnail-subheader">
                         <h5>Pivot</h5>
                         <svg class="dot-divider" xmlns="http://www.w3.org/2000/svg" width="8" height="8"
                             viewBox="0 0 8 9" fill="none">
@@ -97,9 +93,9 @@
                         </svg>
                         <h5>Academic Project</h5>
                     </div>
-                    <div class="headline-cta">
+                    <div class="thumbnail-headline-cta">
                         <h2><strong>Connecting career changers to real info from real people</strong></h2>
-                        <div class="button">Read Case Study</div>
+                        <a href="pivot.html" class="button">Read Case Study</a>
                     </div>
                 </div>
                 <img src="img/Pivot Thumbnail.png" alt="Pivot Thumbnail Image">
@@ -111,6 +107,7 @@
     <footer>
         <p>Template-free &#9996 <br> Developed & designed by Rebecca Chong © 2023</p><br> </p>
     </footer>
+
 
     <script>
         // Autoplay Dot and Line Animation //
@@ -146,8 +143,57 @@
                 element.classList.remove('pressed');
             });
         });
+
+        //Hidden Project Box Effect //
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get references to the project containers
+            const rippleAndSurge = document.getElementById("ripple-and-surge");
+            const pivot = document.getElementById("pivot");
+
+            // Function to check if an element is in the viewport
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Function to handle the scroll event
+            function handleScroll() {
+                if (isInViewport(rippleAndSurge)) {
+                    rippleAndSurge.classList.add("visible");
+                }
+                if (isInViewport(pivot)) {
+                    pivot.classList.add("visible");
+                }
+            }
+
+            // Function to handle the window resize event
+            function handleResize() {
+                // Call handleScroll to check visibility after resize
+                handleScroll();
+
+                // Additional check for visibility of pivot after resize
+                if (isInViewport(pivot)) {
+                    pivot.classList.add("visible");
+                }
+            }
+
+            // Add scroll event listener
+            window.addEventListener("scroll", handleScroll);
+
+            // Add resize event listener
+            window.addEventListener("resize", handleResize);
+
+            // Initial check on page load
+            handleScroll();
+        });
     </script>
 </body>
 
 
 </html>
+

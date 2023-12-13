@@ -61,7 +61,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 4rem;
+  margin: 2rem 4rem;
+  height: 10vh;
 }
 
 .logo {
@@ -116,18 +117,19 @@ body {
   opacity: 0;
 }
 
-.navbar a:hover .work-letter::after {
-  background-color: #0078FC;
+.navbar a:hover .work-letter::after,
+.navbar a:hover .about-letter::after {
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
 }
 
+.navbar a:hover .work-letter::after {
+  background-color: #0078FC;
+}
+
 .navbar a:hover .about-letter::after {
   background-color: #FF6A59;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 1;
 }
 
 
@@ -139,11 +141,13 @@ body {
   align-items: center;
   text-align: center;
   max-width: 40.625rem;
-  margin: auto;
+  margin: 0 auto;
+  height: 80vh;
+  justify-content: center;
+
 }
 
 .hero h1 {
-  margin-top: 20%;
   margin-bottom: 3%;
 }
 
@@ -188,7 +192,7 @@ body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  bottom: 0.35rem;
+  bottom: 0.4rem;
   opacity: 0;
 }
 
@@ -258,7 +262,7 @@ body {
 
 .dashed-line {
   margin-left: -55.5%;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.2rem;
 }
 
 .autoline .dashed-line__path,
@@ -267,22 +271,16 @@ body {
   animation-delay: 1.2s;
   fill: none;
   stroke: #B4B4B4;
-  stroke-dasharray: 189px;
-  /* This is the length of the line */
-  stroke-dashoffset: 189px;
-  /* This is the length of the line */
-  stroke-width: 6px;
-  /* Adjust the stroke width as needed */
+  stroke-dasharray: 189px; /* This is the length of the line */
+  stroke-dashoffset: 189px; /* This is the length of the line */
+  stroke-width: 6px; /* Adjust the stroke width as needed */
 }
 
 .dashed-line__dash {
   fill: none;
   stroke: #FFFFFF;
-  stroke-dasharray: 2px 8px;
-  ;
-  /* Draws a 8px dash line with a 2px gap between */
-  stroke-width: 8px;
-  /* Make the dashed line slightly bigger than the one it's covering */
+  stroke-dasharray: 2px 8px; /* Draws a 8px dash line with a 2px gap between */
+  stroke-width: 8px; /* Make the dashed line slightly bigger than the one it's covering */
 }
 
 @keyframes dashed-line-path {
@@ -342,14 +340,13 @@ body {
 
 /* Container for All Projects */
 
-.projects {
+.project-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
   margin: 4rem;
 }
-
 
 /* Container for Thumbnail Text and Image */
 
@@ -360,12 +357,22 @@ body {
   gap: 4rem;
   padding: 4rem;
   justify-content: center;
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.thumbnail-content.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .thumbnail-content img {
   transition: transform 0.3s ease-in-out;
   transform-origin: center center;
-  max-width: 100%;
+  height: auto;
+  max-width: 35%;
+  min-width: 420px;
   height: auto;
 }
 
@@ -385,7 +392,7 @@ body {
   max-width: 31.25rem;
 }
 
-.subheader {
+.thumbnail-subheader {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -393,7 +400,7 @@ body {
   text-transform: uppercase;
 }
 
-.headline-cta {
+.thumbnail-headline-cta {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -431,12 +438,10 @@ body {
   background-color: #AE7852;
 }
 
-#ripple-and-surge img {
-  max-width: 35%;
-  min-width: 420px;
-  height: auto;
+.intro-blurb {
+  animation-delay: 1.7s;
+  min-width: 22.5rem;
 }
-
 
 /* Pivot ------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -452,22 +457,14 @@ body {
   background-color: #51A7FC;
 }
 
-#pivot img {
-  max-width: 35%;
-  min-width: 420px;
-  height: auto;
-}
-
 
 /* Footer ----------------------------------------------------------------*/
 footer {
   display: flex;
-  margin: 10rem 6rem 3rem 6rem;
+  margin: 8rem 6rem 3rem 6rem;
   text-align: center;
   justify-content: center;
 }
-
-
 
 
 /* Mobile Media Query ------------------------------------------------------------------------------------------------------------- */
@@ -497,7 +494,7 @@ footer {
   }
 
   h5 {
-    font-size: 0.75rem;
+    font-size: 0.82rem;
   }
 
 
@@ -519,7 +516,7 @@ footer {
     margin-left: 2.5rem;
   }
 
-  /* Disable Hover Effects */
+  /* Disable Navbar Hover Effects */
 
   .navbar a:hover .work-letter::after,
   .navbar a:hover .about-letter::after {
@@ -527,7 +524,6 @@ footer {
     opacity: 0;
   }
 
-  /* Remove Dot Effect for Mobile */
   .work-letter::after,
   .about-letter::after {
     display: none;
@@ -600,9 +596,9 @@ footer {
   }
 
 
-  /* Projects --------------------------------------------------------------------------- */
+  /* Landing Page Projects --------------------------------------------------------------------------- */
 
-  .projects {
+  .project-container {
     margin: 2rem;
   }
 
@@ -610,7 +606,7 @@ footer {
     padding: 3rem;
   }
 
-  .subheader {
+  .thumbnail-subheader {
     gap: 0.45rem;
   }
 
@@ -626,26 +622,18 @@ footer {
   .thumbnail-content img {
     transition: none;
     transform: none;
+    max-width: 100%;
+    min-width: 180px
   }
 
   .thumbnail-content:hover img {
     transform: none;
   }
 
-  /* Ripple and Surge ---------------------------------------------------*/
-
-  #ripple-and-surge img {
-    max-width: 100%;
-    min-width: 180px;
-  }
-
   /* Pivot ---------------------------------------------------*/
 
   #pivot img {
     order: 1;
-    /* Set the default order for mobile layout */
-    max-width: 100%;
-    min-width: 180px;
   }
 
   #pivot .thumbnail-text-container {
@@ -702,14 +690,13 @@ footer {
     margin-left: 2.5rem;
   }
 
-  /* Disable Hover Effects */
-  .navbar a:hover .work-letter::after,
+  /* Disable Navbar Hover Effects */
+  .navbar a:hover .work-letter::after
   .navbar a:hover .about-letter::after {
     background-color: transparent;
     opacity: 0;
   }
 
-  /* Remove Dot Effect for Tablet */
   .work-letter::after,
   .about-letter::after {
     display: none;
@@ -777,11 +764,11 @@ footer {
 
   /* Projects --------------------------------------------------------------------------- */
 
-  .projects {
+  .project-container {
     margin: 3rem;
   }
 
-  .subheader {
+  .project-subheader {
     gap: 0.75rem;
   }
 
@@ -797,26 +784,19 @@ footer {
   .thumbnail-content img {
     transition: none;
     transform: none;
+    max-width: 60%;
+    min-width: 420px;
+    height: auto;
   }
 
   .thumbnail-content:hover img {
     transform: none;
   }
 
-  /* Ripple and Surge ---------------------------------------------------*/
-
-  #ripple-and-surge img {
-    max-width: 60%;
-    min-width: 420px;
-    height: auto;
-  }
-
   /* Pivot ---------------------------------------------------*/
 
   #pivot img {
     order: 1;
-    max-width: 60%;
-    min-width: 420px;
   }
 
   #pivot .thumbnail-text-container {
