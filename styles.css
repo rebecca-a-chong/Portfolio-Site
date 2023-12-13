@@ -215,6 +215,7 @@ body {
   opacity: 1;
   animation: moveUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fadeOut 2s ease-in 1s forwards;
   animation-delay: 0.4s;
+  z-index: 2;
 }
 
 @keyframes moveUp {
@@ -263,6 +264,7 @@ body {
 .dashed-line {
   margin-left: -55.5%;
   margin-bottom: 0.2rem;
+  z-index: 1;
 }
 
 .autoline .dashed-line__path,
