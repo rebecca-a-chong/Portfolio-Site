@@ -263,7 +263,7 @@ body {
 
 .dashed-line {
   margin-left: -55.5%;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.1rem;
   z-index: 1;
 }
 
@@ -748,7 +748,7 @@ footer {
 
   .dashed-line {
     margin-left: -54%;
-    margin-bottom: -0.15rem;
+    margin-bottom: -1.6px;
     max-width: 114px;
   }
 
