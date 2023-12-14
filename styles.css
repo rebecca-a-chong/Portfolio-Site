@@ -362,6 +362,7 @@ body {
   opacity: 0;
   transform: translateY(3rem);
   transition: opacity 0.6s, transform 0.6s;
+  border-radius: 0.5rem;
 }
 
 .thumbnail-content.visible {
@@ -429,15 +430,15 @@ body {
 /* Ripple and Surge ---------------------------------------------------------------------------------------------------------------------------- */
 
 #ripple-and-surge {
-  background-color: #E3B08C;
+  background-color: #E7E7E7;
 }
 
 #ripple-and-surge .button {
-  background-color: #8F420C;
+  background-color: #0B85FF;
 }
 
 #ripple-and-surge .button:hover {
-  background-color: #AE7852;
+  background-color: #51A7FC;
 }
 
 /* Pivot ------------------------------------------------------------------------------------------------------------------------------------- */
