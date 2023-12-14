@@ -543,7 +543,7 @@ footer {
   .dot-2::after {
     width: 10px;
     height: 10px;
-    bottom: 3.8px;
+    bottom: 4px;
   }
 
   @keyframes moveUp {
