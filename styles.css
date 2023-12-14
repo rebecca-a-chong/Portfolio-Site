@@ -541,9 +541,9 @@ footer {
 
   .dot-1::after,
   .dot-2::after {
-    width: 11px;
-    height: 11px;
-    bottom: 3.5px;
+    width: 10px;
+    height: 10px;
+    bottom: 3.8px;
   }
 
   @keyframes moveUp {
@@ -576,7 +576,7 @@ footer {
 
   .dashed-line {
     margin-left: -23.5%;
-    margin-bottom: -2.4px;
+    margin-bottom: -3px;
     max-width: 98px;
   }
 
