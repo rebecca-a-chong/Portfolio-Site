@@ -16,10 +16,12 @@
 <body>
     <header>
         <div class="navbar">
-            <img src="img/Personal Logo.png" alt="Personal Logo" class="logo">
+            <a href="index.html">
+                <img src="img/Personal Logo.png" alt="Personal Logo" class="logo"></a>
             <ul>
                 <li class="work-margin">
-                    <h3><strong><a href="#" class="pressableElement">W<span class="work-letter">o</span>rk</a></strong>
+                    <h3><strong><a href="index.html" class="pressableElement">W<span
+                                    class="work-letter">o</span>rk</a></strong>
                     </h3>
                 </li>
                 <li class="about-margin">
@@ -144,7 +146,21 @@
             });
         });
 
-        //Hidden Project Box Effect //
+        const logo = document.querySelector('.logo');
+
+        logo.addEventListener('mousedown', () => {
+            logo.classList.add('pressed');
+        });
+
+        logo.addEventListener('mouseup', () => {
+            logo.classList.remove('pressed');
+        });
+
+        logo.addEventListener('mouseleave', () => {
+            logo.classList.remove('pressed');
+        });
+
+        //Hidden Content Effect //
         document.addEventListener("DOMContentLoaded", function () {
             // Get references to the project containers
             const rippleAndSurge = document.getElementById("ripple-and-surge");
@@ -156,7 +172,7 @@
                 return (
                     rect.top >= -offset &&
                     rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + offset && 
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + offset &&
                     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
                 );
             }
@@ -197,4 +213,3 @@
 
 
 </html>
-
