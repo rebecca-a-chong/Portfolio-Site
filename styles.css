@@ -72,6 +72,7 @@ body {
 .logo {
   max-width: 100%;
   height: auto;
+  min-width: 52.5px;
 }
 
 .navbar ul {
@@ -480,8 +481,7 @@ footer {
   justify-content: center;
   margin: auto;
   text-align: left;
-  padding: 0 4rem;
-  max-width: 1000px;
+  max-width: 1143px;
 }
 
 .introduction-image {
@@ -775,7 +775,6 @@ footer {
   /* Project Pages ---------------------------------------------------------*/
 
   .project-header {
-    padding: 0rem;
     max-width: 544px;
     margin: 0rem 2rem;
   }
@@ -981,10 +980,16 @@ footer {
       order: 2;
     }
 
-    /* Project Pages */
+    /* Project Pages ------------------------------------------------------ */
+
+    .project-header {
+      margin: 0 3rem;
+      max-width: 1174px;
+    }
 
     .case-study-section {
-      grid-template-columns: 85px 2px minmax(418px, 500px);
+      grid-template-columns: 85px 2px minmax(386px, 500px);
+      margin: 4rem 3rem;
     }
     
     .section-title {
