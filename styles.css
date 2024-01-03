@@ -499,7 +499,7 @@ footer {
 
 .case-study-section {
   display: grid;
-  grid-template-columns: 233px 2px 533px;
+  grid-template-columns: 180px 2px 522px;
   column-gap: 1rem;
   justify-content: center;
   align-items: start;
@@ -791,7 +791,7 @@ footer {
   }
 
   .case-study-section {
-    grid-template-columns: minmax(75px, 120px) minmax(2px, 2px) minmax(159px, 394px);
+    grid-template-columns: 75px 2px minmax(159px, 394px);
   }
 
   .case-study-image {
