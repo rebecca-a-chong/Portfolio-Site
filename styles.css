@@ -471,22 +471,22 @@ footer {
 }
 
 
-/* Individual Project Pages ---------------------------------------------------------*/
+/* Project Pages ---------------------------------------------------------*/
 
 .project-header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center; /* Center vertically */
+  justify-content: center; 
   margin: auto;
   text-align: left;
-  padding: 0 4rem; /* 4rem padding on both left and right sides */
+  padding: 0 4rem; 
   max-width: 1000px;
 }
 
 
 .introduction-image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -499,16 +499,16 @@ footer {
 
 .case-study-section {
   display: grid;
-  grid-template-columns: minmax(73px, 233px) minmax(2px, 2px) minmax(159px, 533px);
-  max-width: 800px;
+  grid-template-columns: 233px 2px 533px;
   column-gap: 1rem;
   justify-content: center;
   align-items: start;
-  margin: 4rem auto;
+  margin: 4rem 2rem;
 }
 
 .section-title {
   text-transform: uppercase;
+  word-wrap:break-word;
   text-align: right;
   font-size: x-large;
   font-weight: 700;
@@ -560,10 +560,11 @@ footer {
 /* Images and Videos */
 
 .case-study-image {
-  display: block;
-  margin: 0 auto;
-  width: 1000px;
+  width: 100%;
   height: auto;
+  display: block;
+  margin: auto;
+  max-width: 800px;
 }
 
 .accent-circle-container {
@@ -592,8 +593,8 @@ footer {
 }
 
 .case-study-video {
-  width: 533px;
-  height: 800px;
+  width: 100%;
+  height: auto;
 }
 
 
@@ -775,27 +776,50 @@ footer {
   /* Individual Project Pages ---------------------------------------------------------*/
 
   .project-header {
+    padding: 0rem;
     max-width: 544px;
-    margin: 0rem 2rem 0rem 2rem;
+    margin: 0rem 2rem;
   }
 
   .introduction-image {
+    width: 100%;
+    height: auto;
     max-width: 544px;
+    min-width: 264px;
+    margin-left: 0rem;
+    margin-right: 0rem;
   }
 
   .case-study-section {
-    grid-template-columns: repeat(auto-fit, minmax(73px, 1fr)) minmax(2px, 1fr) repeat(auto-fit, minmax(159px, 1fr));
+    grid-template-columns: minmax(75px, 120px) minmax(2px, 2px) minmax(159px, 394px);
   }
 
   .case-study-image {
-    max-width: 544px;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  .case-study-video {
-    width: 159px;
-    height: auto;
+  .section-title {
+    font-size: 14px;
+    word-wrap:break-word;
+    }
+  
+  .section-subtitle {
+    font-size: 12px;
   }
 
+  .accent-circle-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  
+  .accent-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
 
   /* Tablet Media Query ------------------------------------------------------------------------------------------------------------- */
 
