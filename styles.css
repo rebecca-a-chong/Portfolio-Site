@@ -477,13 +477,12 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center; 
+  justify-content: center;
   margin: auto;
   text-align: left;
-  padding: 0 4rem; 
+  padding: 0 4rem;
   max-width: 1000px;
 }
-
 
 .introduction-image {
   width: 100%;
@@ -508,7 +507,7 @@ footer {
 
 .section-title {
   text-transform: uppercase;
-  word-wrap:break-word;
+  word-wrap: break-word;
   text-align: right;
   font-size: x-large;
   font-weight: 700;
@@ -773,7 +772,7 @@ footer {
     order: 2;
   }
 
-  /* Individual Project Pages ---------------------------------------------------------*/
+  /* Project Pages ---------------------------------------------------------*/
 
   .project-header {
     padding: 0rem;
@@ -784,7 +783,6 @@ footer {
   .introduction-image {
     width: 100%;
     height: auto;
-    max-width: 544px;
     min-width: 264px;
     margin-left: 0rem;
     margin-right: 0rem;
@@ -801,9 +799,8 @@ footer {
 
   .section-title {
     font-size: 14px;
-    word-wrap:break-word;
-    }
-  
+  }
+
   .section-subtitle {
     font-size: 12px;
   }
@@ -814,12 +811,14 @@ footer {
     flex-wrap: wrap;
     margin-bottom: 1rem;
   }
-  
+
   .accent-circle {
     width: 40px;
     height: 40px;
     font-size: 1rem;
   }
+}
+
 
   /* Tablet Media Query ------------------------------------------------------------------------------------------------------------- */
 
@@ -870,6 +869,7 @@ footer {
     }
 
     /* Disable Navbar Hover Effects */
+
     .navbar a:hover .work-letter::after .navbar a:hover .about-letter::after {
       background-color: transparent;
       opacity: 0;
@@ -940,7 +940,7 @@ footer {
     }
 
 
-    /* Projects --------------------------------------------------------------------------- */
+    /* Landing Page Projects --------------------------------------------------------------------------- */
 
     .project-container {
       margin: 3rem;
@@ -971,7 +971,7 @@ footer {
       transform: none;
     }
 
-    /* Pivot ---------------------------------------------------*/
+    /* Pivot */
 
     #pivot img {
       order: 1;
@@ -980,5 +980,24 @@ footer {
     #pivot .thumbnail-text-container {
       order: 2;
     }
+
+    /* Project Pages */
+
+    .case-study-section {
+      grid-template-columns: 85px 2px minmax(418px, 500px);
+    }
+    
+    .section-title {
+      font-size: 16px;
+    }
+  
+    .section-subtitle {
+      font-size: 14px;
+    }
+
+    .case-study-image{
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
   }
-}
