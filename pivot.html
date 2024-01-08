@@ -260,29 +260,47 @@
     </footer>
 
     <script>
-        // Change Style on Press //
-        const pressableElements = document.querySelectorAll('.pressableElement');
-        pressableElements.forEach(element => {
-            element.addEventListener('mousedown', () => {
-                element.classList.add('pressed');
-            });
-
-            element.addEventListener('mouseup', () => {
-                element.classList.remove('pressed');
-            });
-
-            element.addEventListener('mouseleave', () => {
-                element.classList.remove('pressed');
-            });
+    // Change Style on Press //
+    const pressableElements = document.querySelectorAll('.pressableElement');
+    pressableElements.forEach(element => {
+        element.addEventListener('mousedown', () => {
+            element.classList.add('pressed');
         });
 
-        // Scroll to Top Button //
-        document.getElementById('return-to-top').addEventListener('click', function () {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        element.addEventListener('mouseup', () => {
+            element.classList.remove('pressed');
         });
+
+        element.addEventListener('mouseleave', () => {
+            element.classList.remove('pressed');
+        });
+    });
+
+    // Scroll to Top Button //
+    const returnToTopButton = document.getElementById('return-to-top');
+
+    // Function to toggle the visibility of the return-to-top button
+    function toggleReturnToTopButton() {
+        if (window.scrollY > 20) {
+            returnToTopButton.style.display = 'block';
+        } else {
+            returnToTopButton.style.display = 'none';
+        }
+    }
+
+    // Set the initial state to hidden
+    returnToTopButton.style.display = 'none';
+
+    // Add a scroll event listener
+    window.addEventListener('scroll', toggleReturnToTopButton);
+
+    // Scroll to top when the button is clicked
+    returnToTopButton.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
     </script>
 </body>
 
