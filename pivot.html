@@ -15,7 +15,7 @@
     <header>
         <div class="navbar">
             <a href="index.html">
-                <img src="img/Personal Logo.png" alt="Personal Logo" class="logo"></a>
+                <img src="img/Personal Logo.png" alt="Personal Logo" class="logo pressableElement"></a>
             <ul>
                 <li class="work-margin">
                     <h3><strong><a href="index.html" class="pressableElement">W<span
@@ -31,6 +31,14 @@
         </div>
     </header>
 
+    <div class="pressableElement" id="return-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 56 56" fill="none">
+            <circle cx="28" cy="28" r="27" fill="white" stroke="black" stroke-width="2" />
+            <path
+                d="M28.7071 16.2929C28.3166 15.9024 27.6834 15.9024 27.2929 16.2929L20.9289 22.6569C20.5384 23.0474 20.5384 23.6805 20.9289 24.0711C21.3195 24.4616 21.9526 24.4616 22.3431 24.0711L28 18.4142L33.6569 24.0711C34.0474 24.4616 34.6805 24.4616 35.0711 24.0711C35.4616 23.6805 35.4616 23.0474 35.0711 22.6569L28.7071 16.2929ZM29 39L29 17L27 17L27 39L29 39Z"
+                fill="black" />
+        </svg>
+    </div>
 
     <div class="project-header">
         <h1 style="color: #0466C8"><strong>Pivot</strong></h1>
@@ -252,7 +260,7 @@
     </footer>
 
     <script>
-        // Navigation Bar - Change Style on Press //
+        // Change Style on Press //
         const pressableElements = document.querySelectorAll('.pressableElement');
         pressableElements.forEach(element => {
             element.addEventListener('mousedown', () => {
@@ -268,18 +276,12 @@
             });
         });
 
-        const logo = document.querySelector('.logo');
-
-        logo.addEventListener('mousedown', () => {
-            logo.classList.add('pressed');
-        });
-
-        logo.addEventListener('mouseup', () => {
-            logo.classList.remove('pressed');
-        });
-
-        logo.addEventListener('mouseleave', () => {
-            logo.classList.remove('pressed');
+        // Scroll to Top Button //
+        document.getElementById('return-to-top').addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     </script>
 </body>

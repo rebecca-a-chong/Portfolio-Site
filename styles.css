@@ -556,6 +556,15 @@ footer {
   color: #0466C8;
 }
 
+#return-to-top {
+  display: inline-block;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99;
+  cursor: pointer;
+}
+
 /* Images and Videos */
 
 .case-study-image {

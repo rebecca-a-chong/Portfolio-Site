@@ -17,7 +17,7 @@
     <header>
         <div class="navbar">
             <a href="index.html">
-                <img src="img/Personal Logo.png" alt="Personal Logo" class="logo"></a>
+                <img src="img/Personal Logo.png" alt="Personal Logo" class="logo pressableElement"></a>
             <ul>
                 <li class="work-margin">
                     <h3><strong><a href="index.html" class="pressableElement">W<span
@@ -148,21 +148,7 @@
             });
         });
 
-        const logo = document.querySelector('.logo');
-
-        logo.addEventListener('mousedown', () => {
-            logo.classList.add('pressed');
-        });
-
-        logo.addEventListener('mouseup', () => {
-            logo.classList.remove('pressed');
-        });
-
-        logo.addEventListener('mouseleave', () => {
-            logo.classList.remove('pressed');
-        });
-
-        //Hidden Content Effect //
+        // Hidden Content Effect //
         document.addEventListener("DOMContentLoaded", function () {
             // Get references to the project containers
             const rippleAndSurge = document.getElementById("ripple-and-surge");
