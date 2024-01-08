@@ -598,7 +598,6 @@ footer {
 
 
 
-
 /* Mobile Media Query ------------------------------------------------------------------------------------------------------------- */
 
 @media (max-width: 600px) {
@@ -788,7 +787,10 @@ footer {
   }
 
   .case-study-section {
-    grid-template-columns: 75px 2px minmax(159px, 394px);
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .case-study-image {
@@ -797,11 +799,17 @@ footer {
   }
 
   .section-title {
+    width: 100%;
     font-size: 14px;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid #B4B4B4; 
+    padding-bottom: 4px;
+    text-align: left;
   }
 
   .section-subtitle {
     font-size: 12px;
+    margin-bottom: 0.5rem;
   }
 
   .accent-circle-container {
@@ -819,190 +827,190 @@ footer {
 }
 
 
-  /* Tablet Media Query ------------------------------------------------------------------------------------------------------------- */
+/* Tablet Media Query ------------------------------------------------------------------------------------------------------------- */
 
-  @media (max-width: 1270px) and (min-width: 601px) {
+@media (max-width: 1270px) and (min-width: 601px) {
 
-    html {
-      font-size: 16px;
-    }
-
-    h1 {
-      font-size: 2.369rem;
-    }
-
-    h2 {
-      font-size: 1.777rem;
-    }
-
-    h3 {
-      font-size: 1.333rem;
-    }
-
-    h4 {
-      font-size: 1.333rem;
-    }
-
-    h5 {
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-
-    /* Navigation Bar ------------------------------------------------- */
-
-    .logo {
-      width: 5rem;
-    }
-
-    .navbar {
-      margin: 3rem;
-    }
-
-    .about-margin {
-      margin-left: 4rem;
-    }
-
-    .work-margin {
-      margin-left: 2.5rem;
-    }
-
-    /* Disable Navbar Hover Effects */
-
-    .navbar a:hover .work-letter::after .navbar a:hover .about-letter::after {
-      background-color: transparent;
-      opacity: 0;
-    }
-
-    .work-letter::after,
-    .about-letter::after {
-      display: none;
-    }
-
-    /* Hero ------------------------------------------------------- */
-
-    .hero h3 {
-      margin: 0rem 1rem 2rem 1rem;
-    }
-
-    .intro-blurb {
-      max-width: 500px;
-    }
-
-    /* Dot Bounce Animation */
-
-    .dot-1::after,
-    .dot-2::after {
-      width: 12px;
-      height: 12px;
-      bottom: 4px;
-    }
-
-    @keyframes moveUp {
-      0% {
-        transform: translate(-50%, 0);
-      }
-
-      30% {
-        transform: translate(-50%, -1.75rem);
-      }
-
-      40% {
-        transform: translate(-50%, -1.3125rem);
-      }
-
-      50% {
-        transform: translate(-50%, -1.53125rem);
-      }
-
-      55% {
-        transform: translate(-50%, -1.3125rem);
-      }
-
-      100% {
-        transform: translate(-50%, -1.3125rem);
-      }
-    }
-
-    /* Dashed Line Animation */
-
-    .dashed-line {
-      margin-left: -54%;
-      margin-bottom: -1.6px;
-      max-width: 114px;
-    }
-
-    /* Arrow SVG */
-
-    .arrow-container {
-      height: 15rem;
-    }
-
-
-    /* Landing Page Projects --------------------------------------------------------------------------- */
-
-    .project-container {
-      margin: 3rem;
-    }
-
-    .project-subheader {
-      gap: 0.75rem;
-    }
-
-    .dot-divider {
-      width: 8px;
-      height: 8px;
-    }
-
-    .button {
-      font-size: 1rem;
-    }
-
-    .thumbnail-content img {
-      transition: none;
-      transform: none;
-      max-width: 60%;
-      min-width: 420px;
-      height: auto;
-    }
-
-    .thumbnail-content:hover img {
-      transform: none;
-    }
-
-    /* Pivot */
-
-    #pivot img {
-      order: 1;
-    }
-
-    #pivot .thumbnail-text-container {
-      order: 2;
-    }
-
-    /* Project Pages ------------------------------------------------------ */
-
-    .project-header {
-      margin: 0 3rem;
-      max-width: 1174px;
-    }
-
-    .case-study-section {
-      grid-template-columns: 85px 2px minmax(386px, 500px);
-      margin: 4rem 3rem;
-    }
-    
-    .section-title {
-      font-size: 16px;
-    }
-  
-    .section-subtitle {
-      font-size: 14px;
-    }
-
-    .case-study-image{
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-
+  html {
+    font-size: 16px;
   }
+
+  h1 {
+    font-size: 2.369rem;
+  }
+
+  h2 {
+    font-size: 1.777rem;
+  }
+
+  h3 {
+    font-size: 1.333rem;
+  }
+
+  h4 {
+    font-size: 1.333rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+
+  /* Navigation Bar ------------------------------------------------- */
+
+  .logo {
+    width: 5rem;
+  }
+
+  .navbar {
+    margin: 3rem;
+  }
+
+  .about-margin {
+    margin-left: 4rem;
+  }
+
+  .work-margin {
+    margin-left: 2.5rem;
+  }
+
+  /* Disable Navbar Hover Effects */
+
+  .navbar a:hover .work-letter::after .navbar a:hover .about-letter::after {
+    background-color: transparent;
+    opacity: 0;
+  }
+
+  .work-letter::after,
+  .about-letter::after {
+    display: none;
+  }
+
+  /* Hero ------------------------------------------------------- */
+
+  .hero h3 {
+    margin: 0rem 1rem 2rem 1rem;
+  }
+
+  .intro-blurb {
+    max-width: 500px;
+  }
+
+  /* Dot Bounce Animation */
+
+  .dot-1::after,
+  .dot-2::after {
+    width: 12px;
+    height: 12px;
+    bottom: 4px;
+  }
+
+  @keyframes moveUp {
+    0% {
+      transform: translate(-50%, 0);
+    }
+
+    30% {
+      transform: translate(-50%, -1.75rem);
+    }
+
+    40% {
+      transform: translate(-50%, -1.3125rem);
+    }
+
+    50% {
+      transform: translate(-50%, -1.53125rem);
+    }
+
+    55% {
+      transform: translate(-50%, -1.3125rem);
+    }
+
+    100% {
+      transform: translate(-50%, -1.3125rem);
+    }
+  }
+
+  /* Dashed Line Animation */
+
+  .dashed-line {
+    margin-left: -54%;
+    margin-bottom: -1.6px;
+    max-width: 114px;
+  }
+
+  /* Arrow SVG */
+
+  .arrow-container {
+    height: 15rem;
+  }
+
+
+  /* Landing Page Projects --------------------------------------------------------------------------- */
+
+  .project-container {
+    margin: 3rem;
+  }
+
+  .project-subheader {
+    gap: 0.75rem;
+  }
+
+  .dot-divider {
+    width: 8px;
+    height: 8px;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+
+  .thumbnail-content img {
+    transition: none;
+    transform: none;
+    max-width: 60%;
+    min-width: 420px;
+    height: auto;
+  }
+
+  .thumbnail-content:hover img {
+    transform: none;
+  }
+
+  /* Pivot */
+
+  #pivot img {
+    order: 1;
+  }
+
+  #pivot .thumbnail-text-container {
+    order: 2;
+  }
+
+  /* Project Pages ------------------------------------------------------ */
+
+  .project-header {
+    margin: 0 3rem;
+    max-width: 1174px;
+  }
+
+  .case-study-section {
+    grid-template-columns: 85px 2px minmax(386px, 500px);
+    margin: 4rem 3rem;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+  }
+
+  .case-study-image {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+}
