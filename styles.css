@@ -809,7 +809,7 @@ footer {
 
   .section-title {
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 0.75rem;
     border-bottom: 2px solid #B4B4B4; 
     padding-bottom: 4px;
@@ -817,8 +817,12 @@ footer {
   }
 
   .section-subtitle {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 0.5rem;
+  }
+
+  .section-margin {
+    margin-bottom: 2rem;
   }
 
   .accent-circle-container {
