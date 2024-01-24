@@ -199,6 +199,7 @@ body {
   border-radius: 50%;
   bottom: 0.38rem;
   opacity: 0;
+  z-index: 5;
 }
 
 .intro-blurb.autodot .dot-1::after,
@@ -755,8 +756,8 @@ footer {
 
   .dashed-line {
     margin-left: -24%;
-    margin-bottom: -1px;
-    max-width: 98px;
+    margin-bottom: -1.2px;
+    max-width: 100px;
   }
 
   /* Arrow SVG */
