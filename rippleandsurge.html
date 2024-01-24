@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rebecca Chong</title>
+    <link rel="icon" href="img/Favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html">
+                <img src="img/Personal Logo.png" alt="Personal Logo" class="logo pressableElement"></a>
+            <ul>
+                <li class="work-margin">
+                    <h3><strong><a href="index.html" class="pressableElement">W<span
+                                    class="work-letter">o</span>rk</a></strong>
+                    </h3>
+                </li>
+                <li class="about-margin">
+                    <h3><strong><a href="#" class="pressableElement">Ab<span
+                                    class="about-letter">o</span>ut</a></strong>
+                    </h3>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="pressableElement" id="return-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 56 56" fill="none">
+            <circle cx="28" cy="28" r="27" fill="white" stroke="black" stroke-width="2" />
+            <path
+                d="M28.7071 16.2929C28.3166 15.9024 27.6834 15.9024 27.2929 16.2929L20.9289 22.6569C20.5384 23.0474 20.5384 23.6805 20.9289 24.0711C21.3195 24.4616 21.9526 24.4616 22.3431 24.0711L28 18.4142L33.6569 24.0711C34.0474 24.4616 34.6805 24.4616 35.0711 24.0711C35.4616 23.6805 35.4616 23.0474 35.0711 22.6569L28.7071 16.2929ZM29 39L29 17L27 17L27 39L29 39Z"
+                fill="black" />
+        </svg>
+    </div>
+
+    <div id="ripple-and-surge">
+        <div class="project-header">
+            <h1><strong>Ripple and Surge</strong></h1>
+            <h3>Elevating user trust with a polished web presence</h3>
+            <img class="introduction-image" src="img/Pivot - Introduction Image.png">
+        </div>
+
+        <div class="case-study-section">
+            <div class="section-title">Context</div>
+            <div class="line-divider"></div>
+            <div class="case-study-content section-margin">
+                <p>Ripple and Surge is a personal training company that empowers sedentary professional men to lead
+                    healthier, happier, lives. </p>
+
+                <p>I was hired as a UX Designer to expand their customer reach beyond Instagram by redesigning their
+                    existing website to increase conversion rates.</p>
+            </div>
+            <div class="section-subtitle">Duration</div>
+            <div class="line-divider"></div>
+            <div class="case-study-content section-margin">
+                <p>June 2023 - August 2023 (3 months)</p>
+            </div>
+            <div class="section-subtitle">My Role</div>
+            <div class="line-divider"></div>
+            <div class="case-study-content section-margin">
+                <p>UX Research, Wireframing, Prototyping, Design Iteration, Branding</p>
+            </div>
+            <div class="section-subtitle">Tools</div>
+            <div class="line-divider"></div>
+            <div class="case-study-content">
+                <p>Figma, Photoshop</p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>Template-free &#9996
+            <br> Developed & designed by Rebecca Chong © 2023
+        </p>
+    </footer>
+
+    <script>
+        // Change Style on Press //
+        const pressableElements = document.querySelectorAll('.pressableElement');
+        pressableElements.forEach(element => {
+            element.addEventListener('mousedown', () => {
+                element.classList.add('pressed');
+            });
+
+            element.addEventListener('mouseup', () => {
+                element.classList.remove('pressed');
+            });
+
+            element.addEventListener('mouseleave', () => {
+                element.classList.remove('pressed');
+            });
+        });
+
+        // Scroll to Top Button //
+        const returnToTopButton = document.getElementById('return-to-top');
+
+        // Function to toggle the visibility of the return-to-top button
+        function toggleReturnToTopButton() {
+            if (window.scrollY > 20) {
+                returnToTopButton.style.display = 'block';
+            } else {
+                returnToTopButton.style.display = 'none';
+            }
+        }
+
+        // Set the initial state to hidden
+        returnToTopButton.style.display = 'none';
+
+        // Add a scroll event listener
+        window.addEventListener('scroll', toggleReturnToTopButton);
+
+        // Scroll to top when the button is clicked
+        returnToTopButton.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>
