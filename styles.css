@@ -351,7 +351,8 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin: 4rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 /* Container for Thumbnail Text and Image */
@@ -447,7 +448,7 @@ body {
 
 footer {
   display: flex;
-  margin: 8rem 6rem 3rem 6rem;
+  margin: 6rem 6rem 3rem 6rem;
   text-align: center;
   justify-content: center;
 }
@@ -461,16 +462,16 @@ footer {
   align-items: flex-start;
   margin: auto;
   max-width: 1150px;
+  margin-bottom: 2rem;
 }
 
 .introduction-image {
   width: 100%;
   height: auto;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2rem auto;
   display: block;
+  border: 2px solid #B4B4B4;
+  border-radius: 3px;
 }
 
 /* Project Text Formatting*/
@@ -481,7 +482,9 @@ footer {
   column-gap: 1rem;
   justify-content: center;
   align-items: start;
-  margin: 4rem 2rem;
+  padding: 2rem 0rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .section-title {
@@ -532,6 +535,8 @@ footer {
   cursor: pointer;
 }
 
+/* Pivot */ 
+
 #pivot h1,
 #pivot .section-title {
   color: #0466C8;
@@ -551,11 +556,12 @@ footer {
   color: #0466C8;
 }
 
+/* Ripple and Surge */
+
 #ripple-and-surge h1, 
 #ripple-and-surge .section-title {
-  color: #804B28;
+  color: #A0653B;
 }
-
 
 /* Images and Videos */
 
@@ -565,6 +571,12 @@ footer {
   display: block;
   margin: auto;
   max-width: 800px;
+  border: 2px solid #B4B4B4;
+  border-radius: 3px;
+}
+
+.bottom-media-padding {
+  margin-bottom: 2rem;
 }
 
 .accent-circle-container {
@@ -581,11 +593,18 @@ footer {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #0466C8;
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: 700;
   margin-right: 1.333rem;
+}
+
+#pivot .accent-circle {
+  background-color: #0466C8;
+}
+
+#ripple-and-surge .accent-circle {
+  background-color: #A0653B;
 }
 
 .accent-circle-text-container {
@@ -595,6 +614,7 @@ footer {
 .case-study-video {
   width: 100%;
   height: auto;
+  padding-bottom: 2rem;
 }
 
 
@@ -822,6 +842,7 @@ footer {
   .project-header {
     max-width: 544px;
     margin: 0rem 2rem;
+    padding-bottom: 2rem;
   }
 
   .introduction-image {
@@ -835,11 +856,12 @@ footer {
     flex-direction: column;
     margin-left: 2rem;
     margin-right: 2rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .case-study-image {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    width: calc(100% - 4rem);
   }
 
   .section-title {
@@ -1035,11 +1057,12 @@ footer {
   .project-header {
     margin: 0rem 3rem;
     max-width: 1174px;
+    padding-bottom: 2rem;
   }
 
   .case-study-section {
-    grid-template-columns: 85px 2px minmax(386px, 500px);
-    margin: 4rem 3rem;
+    grid-template-columns: 124px 2px minmax(345px, 500px);
+    padding: 2rem 0;
   }
 
   .section-title {
@@ -1051,7 +1074,6 @@ footer {
   }
 
   .case-study-image {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    width: calc(100% - 4rem);
   }
 }
