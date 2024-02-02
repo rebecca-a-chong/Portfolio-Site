@@ -464,13 +464,13 @@ footer {
   align-items: flex-start;
   margin: auto;
   max-width: 1150px;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .introduction-image {
   width: 100%;
   height: auto;
-  margin: 2rem auto;
+  margin-top: 2rem;
   display: block;
   border: 2px solid #B4B4B4;
   border-radius: 3px;
@@ -580,21 +580,35 @@ footer {
   width: 100%;
   height: auto;
   display: block;
-  margin: auto;
+  margin: 0 auto;
   max-width: 900px;
   border: 2px solid #B4B4B4;
   border-radius: 3px;
 }
 
 .bottom-media-padding {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
-.accent-circle-container {
+.accent-circle-container{
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  gap: 1.5rem;
+  margin-top: 1.5rem; 
+  margin-bottom: 2.5rem;
+}
+
+#ripple-and-surge .accent-circle-container{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.accent-circle-content {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 1.5rem;
 }
 
 .accent-circle {
@@ -622,10 +636,16 @@ footer {
   flex: 1;
 }
 
-.case-study-video {
+.case-study-video-container {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  height: auto;
   padding-bottom: 2rem;
+}
+
+.case-study-video {
+  width: 80%;
+  height: auto;
 }
 
 
@@ -852,7 +872,9 @@ footer {
 
   .project-header {
     max-width: 544px;
-    margin: 0rem 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .introduction-image {
@@ -885,6 +907,7 @@ footer {
   .section-subtitle {
     font-size: 14px;
     margin-bottom: 0.5rem;
+    text-align: left;
   }
 
   .section-margin {
@@ -896,7 +919,10 @@ footer {
     height: 40px;
     font-size: 1rem;
   }
-  
+
+  .bottom-media-padding {
+    margin-bottom: 1.5rem;
+  }
 }
 
 
@@ -1072,6 +1098,8 @@ footer {
   .case-study-section {
     grid-template-columns: 124px 2px minmax(345px, 500px);
     padding: 2rem 0;
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   .section-title {
@@ -1084,5 +1112,9 @@ footer {
 
   .case-study-image {
     width: calc(100% - 4rem);
+  }
+
+  .bottom-media-padding {
+    margin-bottom: 2rem;
   }
 }
