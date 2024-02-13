@@ -20,12 +20,12 @@
                 <img src="img/Personal Logo.png" alt="RC Logo" class="logo pressableElement"></a>
             <ul>
                 <li class="work-margin">
-                    <h3><strong><a href="https://rebecca-a-chong/index" class="pressableElement">W<span
+                    <h3><strong><a href="index.html" class="pressableElement">W<span
                                     class="work-letter">o</span>rk</a></strong>
                     </h3>
                 </li>
                 <li class="about-margin">
-                    <h3><strong><a href="https://rebecca-a-chong/about" class="pressableElement">Ab<span
+                    <h3><strong><a href="about.html" class="pressableElement">Ab<span
                                     class="about-letter">o</span>ut</a></strong>
                     </h3>
                 </li>
@@ -67,42 +67,45 @@
         </div>
 
         <div class="project-container">
-            <div class="thumbnail-content" id="ripple-and-surge-thumbnail">
-                <img src="img/Ripple and Surge Thumbnail.png" alt="Ripple and Surge Thumbnail Image">
-                <div class="thumbnail-text-container">
-                    <div class="thumbnail-subheader">
-                        <h5>Ripple & Surge</h5>
-                        <svg class="dot-divider" xmlns="http://www.w3.org/2000/svg" width="8" height="8"
-                            viewBox="0 0 8 9" fill="none">
-                            <circle cx="4" cy="4.5" r="4" fill="black" />
-                        </svg>
-                        <h5>Web Design</h5>
-                    </div>
-                    <div class="thumbnail-headline-cta">
-                        <h2><strong>Improving conversion rates through a responsive redesign</strong></h2>
-                        <a href='rippleandsurge.html' class="button" id="thumbnail-button">Read Case Study</a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="thumbnail-content" id="pivot-thumbnail">
-                <div class="thumbnail-text-container">
-                    <div class="thumbnail-subheader">
-                        <h5>Pivot</h5>
-                        <svg class="dot-divider" xmlns="http://www.w3.org/2000/svg" width="8" height="8"
-                            viewBox="0 0 8 9" fill="none">
-                            <circle cx="4" cy="4.5" r="4" fill="black" />
-                        </svg>
-                        <h5>Academic Project</h5>
-                    </div>
-                    <div class="thumbnail-headline-cta">
-                        <h2><strong>Connecting career changers to real info from real people</strong></h2>
-                        <a href='pivot.html' class="button" id="thumbnail-button">Read Case Study</a>
+            <a href="rippleandsurge.html">
+                <div class="thumbnail-content" id="ripple-and-surge-thumbnail">
+                    <img src="img/Ripple and Surge Thumbnail.png" alt="Ripple and Surge Thumbnail Image">
+                    <div class="thumbnail-text-container">
+                        <div class="thumbnail-subheader">
+                            <h5>Ripple & Surge</h5>
+                            <svg class="dot-divider" xmlns="http://www.w3.org/2000/svg" width="8" height="8"
+                                viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="4" fill="black" />
+                            </svg>
+                            <h5>Web Design</h5>
+                        </div>
+                        <div class="thumbnail-headline-cta">
+                            <h2><strong>Improving conversion rates through a responsive redesign</strong></h2>
+                        </div>
                     </div>
                 </div>
-                <img src="img/Pivot Thumbnail.png" alt="Pivot Thumbnail Image">
-            </div>
+            </a>
+
+            <a href="pivot.html">
+                <div class="thumbnail-content" id="pivot-thumbnail">
+                    <div class="thumbnail-text-container">
+                        <div class="thumbnail-subheader">
+                            <h5>Pivot</h5>
+                            <svg class="dot-divider" xmlns="http://www.w3.org/2000/svg" width="8" height="8"
+                                viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="4" fill="black" />
+                            </svg>
+                            <h5>Mobile App Concept</h5>
+                        </div>
+                        <div class="thumbnail-headline-cta">
+                            <h2><strong>Connecting career changers to real info from real people</strong></h2>
+                        </div>
+                    </div>
+                    <img src="img/Pivot Thumbnail.png" alt="Pivot Thumbnail Image">
+                </div>
         </div>
+        </a>
     </main>
 
 
@@ -119,11 +122,11 @@
             const introBlurb = document.getElementById("intro-blurb");
             setTimeout(function () {
                 introBlurb.classList.add("autodot");
-            }, 3000); // Delay time (in milliseconds)
+            }, 2000); // Delay time (in milliseconds)
 
             setTimeout(function () {
                 introBlurb.classList.add("autoline");
-            }, 3000); // Delay time (in milliseconds)
+            }, 2000); // Delay time (in milliseconds)
 
             introBlurb.addEventListener("animationend", (event) => {
                 if (event.animationName === "dashed-line-fadeOutPath") {
@@ -181,7 +184,7 @@
                 // Call handleScroll to check visibility after resize
                 handleScroll();
 
-                // Additional check for visibility of pivot after resize
+                // Additional check for visibility of Pivot after resize
                 if (isInViewport(pivot)) {
                     pivot.classList.add("visible");
                 }

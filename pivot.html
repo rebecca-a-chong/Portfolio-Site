@@ -23,7 +23,7 @@
                     </h3>
                 </li>
                 <li class="about-margin">
-                    <h3><strong><a href="#" class="pressableElement">Ab<span
+                    <h3><strong><a href="about.html" class="pressableElement">Ab<span
                                     class="about-letter">o</span>ut</a></strong>
                     </h3>
                 </li>
@@ -81,17 +81,19 @@
                         href=https://www.indeed.com/leadershiphub/career-change>a study conducted by Indeed</a> found
                     that:
                 </p>
-
-                <p><span class="accent-text">49%</span> of respondents had made a dramatic career shift, with <span
-                        class="accent-text">88%</span> of them
-                    reportedly happier since making the change.</p>
-                <p>Even among those who hadn't switched careers, <span class="accent-text">65%</span>
-                    had considered or were considering it.</p>
-
-                <p>Inspired by these findings and my career journey, I set out to design a
-                    solution that could help others navigate their career transitions with greater confidence.</p>
             </div>
         </div>
+        
+        <img src="img/Pivot - Indeed Statistics.gif" class="case-study-image">
+
+        <div class="case-study-section">
+        <div class="line-divider"></div>
+        <div class="case-study-content">
+            <p>Inspired by these findings and my own career journey, I set out to design a
+                solution that could help others navigate their career transitions with greater confidence.
+            </p>
+        </div>
+    </div>
 
         <div class="case-study-section">
             <div class="section-title">The Problem Space</div>
@@ -127,7 +129,8 @@
                     <div class="accent-circle-content">
                         <div class="accent-circle">1</div>
                         <div class="accent-circle-text-container">
-                            Career changers <span class="colored-text">spend a significant amount of time</span> searching
+                            Career changers <span class="colored-text">spend a significant amount of time</span>
+                            searching
                             for and
                             verifying the credibility
                             of
@@ -137,14 +140,16 @@
                     <div class="accent-circle-content">
                         <div class="accent-circle">2</div>
                         <div class="accent-circle-text-container">
-                            Career changers prioritize success stories from <span class="colored-text">people with similar
+                            Career changers prioritize success stories from <span class="colored-text">people with
+                                similar
                                 career journeys</span> over other
                             generic content. </div>
                     </div>
                     <div class="accent-circle-content">
                         <div class="accent-circle">3</div>
                         <div class="accent-circle-text-container">
-                            Being able to <span class="colored-text">immerse themselves</span> in the day-to-day experiences
+                            Being able to <span class="colored-text">immerse themselves</span> in the day-to-day
+                            experiences
                             of
                             a potential job was critical
                             for
@@ -161,19 +166,6 @@
                     replicates real life as closely as possible.</p>
             </div>
         </div>
-
-        <div class="case-study-section">
-            <div class="section-title">Lo-Fi Drafts</div>
-            <div class="line-divider"></div>
-            <div class="case-study-content">
-                I explored different layout ideas by <span class="colored-text">sketching paper wireframes</span>.
-                Afterwards, I reviewed my drawings and
-                incorporated the parts I liked best into
-                <span class="colored-text">digital wireframes</span> using Figma.
-            </div>
-        </div>
-
-        <img src="img/Pivot - Lo-Fi Wireframes.png" class="case-study-image bottom-media-padding">
 
         <div class="case-study-section">
             <div class="section-title">Styling the Hi-Fi</div>
@@ -282,6 +274,14 @@
                 </div>
             </div>
         </div>
+
+        <div class="case-study-section">
+            <div class="section-title">Final Thoughts</div>
+            <div class="line-divider"></div>
+            <div class="case-study-content">
+                <p>This project taught me XYZHFJKLJDSLKFJKLSDJFKLSJDFKLJSDF
+            </div>
+        </div>
     </div>
 
     <footer>
@@ -332,6 +332,28 @@
                 behavior: 'smooth'
             });
         });
+
+        // Content Reveal on Scroll effect //
+        function revealElements() {
+            const elements = document.querySelectorAll('.case-study-section, .case-study-image');
+
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                // Adjust the threshold as needed
+                if (elementTop < windowHeight * 0.8) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Call the revealElements function on scroll
+        window.addEventListener('scroll', revealElements);
+
+        // Call the revealElements function on page load (in case some elements are already in view)
+        window.addEventListener('load', revealElements);
+
     </script>
 </body>
 
