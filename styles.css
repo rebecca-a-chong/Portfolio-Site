@@ -786,7 +786,7 @@ footer {
   /* Hero ------------------------------------------------------- */
 
   .hero {
-    min-height: 640px;
+    min-height: 80vh;
   }
   
   .hero h3 {
@@ -1009,6 +1009,10 @@ footer {
 
   /* Hero ------------------------------------------------------- */
 
+  .hero {
+    min-height: 80vh;
+  }
+  
   .hero h3 {
     margin: 0rem 1rem 2rem 1rem;
   }
