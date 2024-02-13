@@ -67,6 +67,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 2rem 4rem;
+  height: 10vh;
 }
 
 .logo {
@@ -148,8 +149,7 @@ body {
   text-align: center;
   max-width: 40.625rem;
   margin: auto;
-  margin-top: 15rem;
-  margin-bottom: 15rem;
+  height: 80vh;
   justify-content: center;
 }
 
