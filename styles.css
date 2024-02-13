@@ -68,6 +68,7 @@ body {
   align-items: center;
   margin: 2rem 4rem;
   height: 10vh;
+  min-height: 120px;
 }
 
 .logo {
@@ -150,6 +151,7 @@ body {
   max-width: 40.625rem;
   margin: auto;
   height: 80vh;
+  min-height: 650px;
   justify-content: center;
 }
 
@@ -440,7 +442,7 @@ footer {
   margin: auto;
   max-width: 1150px;
   margin-bottom: 2.5rem;
-  margin-top: 5rem;
+  margin-top: 2.5rem;
 }
 
 .introduction-image {
@@ -756,6 +758,7 @@ footer {
 
   .navbar {
     margin: 2rem;
+    min-height: 64px;
   }
 
   .about-margin {
@@ -887,9 +890,7 @@ footer {
 
   .project-header {
     max-width: 544px;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 2rem;
   }
 
   .introduction-image {
@@ -979,6 +980,7 @@ footer {
 
   .navbar {
     margin: 3rem;
+    min-height: 100px;
   }
 
   .about-margin {
