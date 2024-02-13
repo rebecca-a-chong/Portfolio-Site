@@ -67,7 +67,6 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 2rem 4rem;
-  height: 10vh;
 }
 
 .logo {
@@ -149,7 +148,8 @@ body {
   text-align: center;
   max-width: 40.625rem;
   margin: auto;
-  height: 80vh;
+  margin-top: 15rem;
+  margin-bottom: 15rem;
   justify-content: center;
 }
 
@@ -370,11 +370,6 @@ body {
   border-radius: 0.5rem;
 }
 
-.thumbnail-content.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 #ripple-and-surge-thumbnail {
   background-color: #E7E7E7;
 }
@@ -445,6 +440,7 @@ footer {
   margin: auto;
   max-width: 1150px;
   margin-bottom: 2.5rem;
+  margin-top: 5rem;
 }
 
 .introduction-image {
@@ -467,6 +463,9 @@ footer {
   padding: 2.5rem 0rem;
   margin-left: 2rem;
   margin-right: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 1s ease;
 }
 
 .section-title {
@@ -517,7 +516,6 @@ footer {
   cursor: pointer;
 }
 
-
 /* Pivot */ 
 
 #pivot h1,
@@ -533,10 +531,6 @@ footer {
   color: #0466C8;
   font-size: 1.333rem;
   font-weight: 700;
-}
-
-#pivot .colored-text {
-  background-color: rgba(4,102,200,0.2);
 }
 
 /* Ripple and Surge */
@@ -560,6 +554,9 @@ footer {
   max-width: 900px;
   border: 2px solid #B4B4B4;
   border-radius: 3px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 1s ease;
 }
 
 .bottom-media-padding {
@@ -622,6 +619,11 @@ footer {
 .case-study-video {
   width: 80%;
   height: auto;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
