@@ -785,6 +785,10 @@ footer {
 
   /* Hero ------------------------------------------------------- */
 
+  .hero {
+    min-height: 640px;
+  }
+  
   .hero h3 {
     margin: 0rem 2rem;
     max-width: 258px;
