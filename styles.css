@@ -575,7 +575,7 @@ footer {
   margin-bottom: 2.5rem;
 }
 
-#ripple-and-surge .accent-circle-container{
+.accent-circle-container {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -621,6 +621,7 @@ footer {
 .case-study-video {
   width: 80%;
   height: auto;
+  border: 2px solid #DBDBDB;
 }
 
 .visible {
