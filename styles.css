@@ -641,18 +641,16 @@ footer {
 /* Typing Effect */
 
 .typing-container {
-  margin: 4rem 2rem;
+  margin: 2rem 2rem 1rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4rem;
 }
 
 #feature-text {
   margin-left: 12px;
   font-size: 4.209rem;
   letter-spacing: -1.5px;
-  color: #0078FC;
 }
 
 .input-cursor {
@@ -687,9 +685,16 @@ footer {
 .body-container {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  max-width: 700px;
   width: calc(100% - 4rem);
   margin: auto;
+}
+
+.profile-pic {
+  display: block;
+  margin: 1rem auto 3rem auto;
+  height: auto;
+  max-width: 350px;
 }
 
 .trait-section {
@@ -713,6 +718,7 @@ footer {
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 8px;
+  color: #0078FC;
 }
 
 .trait-text {
@@ -984,7 +990,13 @@ footer {
   img[src="img/Small Screaming Crow.png"] {
     max-width: 38px; /* Adjust the width as needed */
   }
+
+  .profile-pic {
+    max-width: 250px;
+  }
+  
 }
+
 
 /* Tablet Media Query ------------------------------------------------------------------------------------------------------------- */
 
@@ -1023,7 +1035,7 @@ footer {
   }
 
   .navbar {
-    margin: 3rem;
+    margin: 2rem 3rem;
     min-height: 100px;
   }
 
