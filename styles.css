@@ -995,6 +995,10 @@ footer {
     max-width: 250px;
   }
   
+  .trait-section {
+    gap: 16px;
+  }
+
 }
 
 
