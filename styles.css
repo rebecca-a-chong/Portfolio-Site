@@ -518,7 +518,7 @@ footer {
   cursor: pointer;
 }
 
-/* Pivot */ 
+/* Pivot */
 
 #pivot h1,
 #pivot .section-title {
@@ -537,7 +537,7 @@ footer {
 
 /* Ripple and Surge */
 
-#ripple-and-surge h1, 
+#ripple-and-surge h1,
 #ripple-and-surge .section-title {
   color: #A0653B;
 }
@@ -565,13 +565,13 @@ footer {
   margin-bottom: 2.5rem;
 }
 
-.accent-circle-container{
+.accent-circle-container {
   flex-direction: column;
   display: flex;
   width: 100%;
   flex: 1;
   gap: 1.5rem;
-  margin-top: 1.5rem; 
+  margin-top: 1.5rem;
   margin-bottom: 2.5rem;
 }
 
@@ -690,13 +690,6 @@ footer {
   margin: auto;
 }
 
-.profile-pic {
-  display: block;
-  margin: 1rem auto 3rem auto;
-  height: auto;
-  max-width: 350px;
-}
-
 .trait-section {
   display: flex;
   flex-direction: column;
@@ -728,6 +721,12 @@ footer {
   flex: 60%;
 }
 
+.hobbies {
+  list-style-position: inside;
+}
+
+/* Images */
+
 .svg-wrapper {
   display: flex;
   width: 15%;
@@ -736,9 +735,95 @@ footer {
   flex-shrink: 8;
 }
 
-.hobbies {
-  list-style-position: inside;
+.profile-pic {
+  display: block;
+  width: 100%;
+  height: auto;
 }
+
+.picture-container {
+  position: relative; 
+  max-width: 350px;
+}
+
+.circle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px; 
+  margin: auto;
+  margin: 2rem auto 3rem auto;
+}
+
+/* Circle Dashed Line Effect */
+
+.circular-progress {
+  --size: 400px;
+  --half-size: calc(var(--size) / 2);
+  --stroke-width: 7px;
+  --radius: calc((var(--size) - var(--stroke-width)) / 2);
+  --circumference: calc(var(--radius) * pi * 2);
+  --dash: calc((var(--progress) * var(--circumference)) / 100);
+  animation: progress-animation 1s linear 0s 1 forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.circular-progress circle {
+  cx: var(--half-size);
+  cy: var(--half-size);
+  r: var(--radius);
+  stroke-width: var(--stroke-width);
+  fill: none;
+  stroke-linecap: square;
+}
+
+.circular-progress circle.circle-mask {
+  stroke: #FFFFFF;
+  stroke-dasharray: calc(var(--circumference)/120) calc(var(--circumference)/40);
+  stroke-width: 10px;
+}
+
+.circular-progress circle.circle-fill {
+  transform: rotate(-90deg);
+  transform-origin: var(--half-size) var(--half-size);
+  stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+  transition: stroke-dasharray 0.3s linear 0s;
+  stroke: #5394fd;
+}
+
+@property --progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes progress-animation {
+  from {
+    --progress: 0;
+  }
+
+  to {
+    --progress: 100;
+  }
+}
+
 
 
 /* Mobile Media Query ------------------------------------------------------------------------------------------------------------- */
@@ -810,7 +895,7 @@ footer {
   .hero {
     min-height: 80vh;
   }
-  
+
   .hero h3 {
     margin: 0rem 2rem;
     max-width: 258px;
@@ -988,15 +1073,26 @@ footer {
   }
 
   img[src="img/Small Screaming Crow.png"] {
-    max-width: 38px; /* Adjust the width as needed */
+    max-width: 38px;
+  }
+
+  .trait-section {
+    gap: 16px;
   }
 
   .profile-pic {
     max-width: 250px;
   }
   
-  .trait-section {
-    gap: 16px;
+  .picture-container {
+    position: relative; 
+    max-width: 350px;
+  }
+  
+  .profile-container {
+    width: 275px;
+    height: 275px; 
+    margin: 2rem auto 3rem auto;
   }
 
 }
@@ -1068,7 +1164,7 @@ footer {
   .hero {
     min-height: 80vh;
   }
-  
+
   .hero h3 {
     margin: 0rem 1rem 2rem 1rem;
   }
