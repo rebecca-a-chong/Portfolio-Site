@@ -156,7 +156,7 @@ body {
 }
 
 .hero h1 {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .greeting,
@@ -956,7 +956,7 @@ footer {
   /* Dashed Line Animation */
 
   .line-container {
-    top: 3px;
+    top: 4px;
     left: 70px;
     max-width: 100px;
   }
