@@ -956,7 +956,7 @@ footer {
   /* Dashed Line Animation */
 
   .line-container {
-    top: 5px;
+    top: 3px;
     left: 70px;
     max-width: 100px;
   }
