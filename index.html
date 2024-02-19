@@ -39,17 +39,21 @@
             <h1 class="greeting">Hi, I'm Rebecca!</h1>
 
             <div class="intro-blurb" id="intro-blurb">
-                <svg class="dashed-line" width="152" height="5" viewBox="0 0 152 5" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <path id="dashed-line" d="M0 0 L152 0" />
-                    </defs>
-                    <!-- A solid gray line -->
-                    <use class="dashed-line__path" xlink:href="#dashed-line" />
-                    <!-- A dashed white line that sits on top of the solid gray line -->
-                    <use class="dashed-line__dash" xlink:href="#dashed-line" />
-                </svg>
-                <h3>I c<span class="dot-1">o</span>nnect the d<span class="dot-2">o</span>ts between user-centricity and
-                    business strategy as a <strong>UX Designer</strong>.</h3>
+                <div class="line-container">
+                    <svg class="dashed-line" width="150" height="15" viewBox="0 0 150 15"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <path id="dashed-line" d="M0 0 L150 0" />
+                        </defs>
+                        <use class="dashed-line__path" xlink:href="#dashed-line" />
+                        <use class="dashed-line__dash" xlink:href="#dashed-line" />
+                    </svg>
+                </div>
+                <div class="blurb-container">
+                    <h3>I c<span class="dot-1">o</span>nnect the d<span class="dot-2">o</span>ts between user-centricity
+                        and
+                        business strategy as a <strong>UX Designer</strong>.</h3>
+                </div>
             </div>
 
             <div class="arrow-container">
@@ -170,7 +174,7 @@
 
             // Function to handle the scroll event
             function handleScroll() {
-                const offset = 400;
+                const offset = 300;
                 if (isInViewport(rippleAndSurge, offset)) {
                     rippleAndSurge.classList.add("visible");
                 }

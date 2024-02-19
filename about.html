@@ -162,6 +162,8 @@
         </footer>
 
         <script>
+
+            // Typing Animation
             const carouselText = [
                 { text: "Rebecca!" },
                 { text: "Becca!" },
@@ -227,6 +229,23 @@
             function waitForMs(ms) {
                 return new Promise(resolve => setTimeout(resolve, ms))
             }
+
+        // Navigation Bar - Change Style on Press //
+        const pressableElements = document.querySelectorAll('.pressableElement');
+        pressableElements.forEach(element => {
+            element.addEventListener('mousedown', () => {
+                element.classList.add('pressed');
+            });
+
+            element.addEventListener('mouseup', () => {
+                element.classList.remove('pressed');
+            });
+
+            element.addEventListener('mouseleave', () => {
+                element.classList.remove('pressed');
+            });
+        });
+
         </script>
     </body>
 

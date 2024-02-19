@@ -268,9 +268,24 @@ body {
 
 /* Dashed Line Animation */
 
+.line-container {
+  display: flex;
+  position: relative;
+  top: 3px;
+  left: 68px;
+  max-width: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.blurb-container {
+  display: flex;
+  position: relative;
+}
+
 .dashed-line {
-  margin-left: -55.5%;
-  margin-bottom: 0.12rem;
+  width: 100%;
+  height: auto;
 }
 
 .autoline .dashed-line__path,
@@ -279,9 +294,9 @@ body {
   animation-delay: 1.2s;
   fill: none;
   stroke: #B4B4B4;
-  stroke-dasharray: 189px;
+  stroke-dasharray: 150px;
   /* This is the length of the line */
-  stroke-dashoffset: 189px;
+  stroke-dashoffset: 150px;
   /* This is the length of the line */
   stroke-width: 6px;
   /* Adjust the stroke width as needed */
@@ -290,15 +305,15 @@ body {
 .dashed-line__dash {
   fill: none;
   stroke: #FFFFFF;
-  stroke-dasharray: 2px 8px;
-  /* Draws a 8px dash line with a 2px gap between */
-  stroke-width: 8px;
+  stroke-dasharray: 3 8;
+  /* Draws a 10px dash line with a 4px gap between */
+  stroke-width: 8;
   /* Make the dashed line slightly bigger than the one it's covering */
 }
 
 @keyframes dashed-line-path {
   from {
-    stroke-dashoffset: 189px;
+    stroke-dashoffset: 150px;
   }
 
   to {
@@ -820,7 +835,7 @@ footer {
   }
 
   to {
-    --progress: 100;
+    --progress: 99;
   }
 }
 
@@ -938,10 +953,10 @@ footer {
 
   /* Dashed Line Animation */
 
-  .dashed-line {
-    margin-left: -24%;
-    margin-bottom: -2.75px;
-    max-width: 99px;
+  .line-container {
+    top: 5px;
+    left: 68px;
+    max-width: 100px;
   }
 
   /* Arrow SVG */
@@ -1210,10 +1225,10 @@ footer {
 
   /* Dashed Line Animation */
 
-  .dashed-line {
-    margin-left: -54%;
-    margin-bottom: -1.6px;
-    max-width: 114px;
+  .line-container {
+    top: 4px;
+    left: 56px;
+    max-width: 115px;
   }
 
   /* Arrow SVG */
