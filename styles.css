@@ -884,7 +884,7 @@ footer {
   /* Navigation Bar ------------------------------------------------- */
 
   .logo {
-    max-width: 3rem;
+    max-width: 2.5rem;
   }
 
   .navbar {
@@ -1235,7 +1235,7 @@ footer {
   /* Dashed Line Animation */
 
   .line-container {
-    top: 5px;
+    top: 4px;
     left: 56px;
     max-width: 115px;
   }
