@@ -80,7 +80,7 @@ body {
 }
 
 .logo {
-  min-width: 64px; 
+  min-width: 56px; 
   height: auto;
 }
 
@@ -1155,7 +1155,7 @@ footer {
   /* Navigation Bar ------------------------------------------------- */
 
   .logo {
-    max-width: 5rem;
+    max-width: 4rem;
   }
 
   .navbar {
@@ -1235,7 +1235,7 @@ footer {
   /* Dashed Line Animation */
 
   .line-container {
-    top: 4px;
+    top: 5px;
     left: 56px;
     max-width: 115px;
   }
