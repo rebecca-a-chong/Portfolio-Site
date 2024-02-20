@@ -71,10 +71,17 @@ body {
   min-height: 120px;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90px;
+  max-height: 90px;
+}
+
 .logo {
-  max-width: 100%;
+  min-width: 64px; 
   height: auto;
-  min-width: 52.5px;
 }
 
 .navbar ul {
@@ -271,7 +278,7 @@ body {
 .line-container {
   display: flex;
   position: relative;
-  top: 3px;
+  top: 4px;
   left: 68px;
   max-width: 150px;
   justify-content: center;
@@ -300,16 +307,16 @@ body {
   /* This is the length of the line */
   stroke-dashoffset: 150px;
   /* This is the length of the line */
-  stroke-width: 6px;
+  stroke-width: 5px;
   /* Adjust the stroke width as needed */
 }
 
 .dashed-line__dash {
   fill: none;
   stroke: #FFFFFF;
-  stroke-dasharray: 3 8;
-  /* Draws a 10px dash line with a 4px gap between */
-  stroke-width: 8;
+  stroke-dasharray: 3 7;
+  /* Draws a 7px dash line with a 3px gap between */
+  stroke-width: 7;
   /* Make the dashed line slightly bigger than the one it's covering */
 }
 
@@ -877,7 +884,7 @@ footer {
   /* Navigation Bar ------------------------------------------------- */
 
   .logo {
-    width: 3.75rem;
+    max-width: 3rem;
   }
 
   .navbar {
@@ -1148,7 +1155,7 @@ footer {
   /* Navigation Bar ------------------------------------------------- */
 
   .logo {
-    width: 5rem;
+    max-width: 5rem;
   }
 
   .navbar {
