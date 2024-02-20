@@ -1075,6 +1075,9 @@ footer {
     margin-bottom: 1.5rem;
   }
 
+  #pivot .accent-text {
+    font-size: 1.00rem;
+  }
 
   /* About Me ---------------------------------------------------------*/
 
