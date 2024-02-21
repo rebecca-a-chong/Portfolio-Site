@@ -74,7 +74,7 @@
         <div class="project-container">
 
             <a href="rippleandsurge.html">
-                <div class="thumbnail-content" id="ripple-and-surge-thumbnail">
+                <div class="thumbnail-content" id="ripple-and-surge-project">
                     <img src="img/Ripple and Surge Thumbnail.png" alt="Ripple and Surge Thumbnail Image">
                     <div class="thumbnail-text-container">
                         <div class="thumbnail-subheader">
@@ -93,7 +93,7 @@
             </a>
 
             <a href="pivot.html">
-                <div class="thumbnail-content" id="pivot-thumbnail">
+                <div class="thumbnail-content" id="pivot-project">
                     <div class="thumbnail-text-container">
                         <div class="thumbnail-subheader">
                             <h5>Pivot</h5>
@@ -159,8 +159,8 @@
         // Hidden Content Effect //
         document.addEventListener("DOMContentLoaded", function () {
             // Get references to the project containers
-            const rippleAndSurge = document.getElementById("ripple-and-surge-thumbnail");
-            const pivot = document.getElementById("pivot-thumbnail");
+            const rippleAndSurge = document.getElementById("ripple-and-surge-project");
+            const pivot = document.getElementById("pivot-project");
 
             // Function to check if an element is in the viewport
             function isInViewport(element, offset) {
@@ -175,8 +175,8 @@
 
             // Function to handle the scroll event
             function handleScroll() {
-                const offset = 300;
-                if (isInViewport(rippleAndSurge, offset)) {
+                const offset = 400;
+                if (isInViewport(rippleAndSurge, offset - 150)) {
                     rippleAndSurge.classList.add("visible");
                 }
                 if (isInViewport(pivot, offset)) {
@@ -192,6 +192,11 @@
                 // Additional check for visibility of Pivot after resize
                 if (isInViewport(pivot)) {
                     pivot.classList.add("visible");
+                }
+
+                // Additional check for visibility of Ripple and Surge after resize
+                if (isInViewport(rippleAndSurge)) {
+                    rippleAndSurge.classList.add("visible");
                 }
             }
 

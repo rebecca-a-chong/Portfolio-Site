@@ -396,11 +396,11 @@ body {
   border-radius: 0.5rem;
 }
 
-#ripple-and-surge-thumbnail {
+#ripple-and-surge-project {
   background-color: #E7E7E7;
 }
 
-#pivot-thumbnail {
+#pivot-project {
   background-color: #9FCFFF;
 }
 
@@ -1013,11 +1013,11 @@ footer {
 
   /* Pivot */
 
-  #pivot-thumbnail img {
+  #pivot-project img {
     order: 1;
   }
 
-  #pivot-thumbnail .thumbnail-text-container {
+  #pivot-project .thumbnail-text-container {
     order: 2;
   }
 
@@ -1279,11 +1279,11 @@ footer {
 
   /* Pivot */
 
-  #pivot-thumbnail img {
+  #pivot-project img {
     order: 1;
   }
 
-  #pivot-thumbnail .thumbnail-text-container {
+  #pivot-project .thumbnail-text-container {
     order: 2;
   }
 
