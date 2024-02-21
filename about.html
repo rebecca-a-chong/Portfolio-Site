@@ -40,17 +40,17 @@
             <span class="input-cursor"></span>
         </div>
 
-    <div class="profile-container">
-        <div class="picture-container">
-            <img src="img/Profile Pic.png" class="profile-pic">
+        <div class="profile-container">
+            <div class="picture-container">
+                <img src="img/Profile Pic.png" class="profile-pic">
+            </div>
+            <div class="circle-container">
+                <svg width="400" height="400" viewBox="0 0 400 400" class="circular-progress">
+                    <circle class="circle-fill"></circle>
+                    <circle class="circle-mask"></circle>
+                </svg>
+            </div>
         </div>
-        <div class="circle-container">
-            <svg width="400" height="400" viewBox="0 0 400 400" class="circular-progress">
-                <circle class="circle-fill"></circle>
-                <circle class="circle-mask"></circle>
-            </svg>
-        </div>
-    </div>
 
         <div class="body-container">
             <p>
@@ -72,21 +72,21 @@
                     </svg>
                 </div>
                 <div class="trait-text">
-                    <div class="trait-header">Scrutineer</div>
-                    <p> I’m a meticulous person who values precision and quality. My belief that details make the
-                        difference motivates me to ensure that every aspect of a design is thoughtfully considered and
-                        executed.
+                    <div class="trait-header">Collaborator</div>
+                    <p> I thrive on building authentic relationships within and across teams. I recognize that the
+                        meeting
+                        of
+                        diverse minds is where the magic happens!
                     </p>
                 </div>
             </div>
 
             <div class="trait-container">
                 <div class="trait-text">
-                    <div class="trait-header">Collaborator</div>
-                    <p> I thrive on building authentic relationships within and across teams. I recognize that the
-                        meeting
-                        of
-                        diverse minds is where the magic happens!
+                    <div class="trait-header">Scrutineer</div>
+                    <p> I’m a meticulous person who values precision and quality. My belief that details make the
+                        difference motivates me to ensure that every aspect of a design is thoughtfully considered and
+                        executed.
                     </p>
                 </div>
                 <div class="svg-wrapper">
@@ -106,7 +106,6 @@
                     </svg>
                 </div>
             </div>
-
 
             <div class="trait-container">
                 <div class="svg-wrapper">
@@ -231,21 +230,21 @@
                 return new Promise(resolve => setTimeout(resolve, ms))
             }
 
-        // Navigation Bar - Change Style on Press //
-        const pressableElements = document.querySelectorAll('.pressableElement');
-        pressableElements.forEach(element => {
-            element.addEventListener('mousedown', () => {
-                element.classList.add('pressed');
-            });
+            // Navigation Bar - Change Style on Press //
+            const pressableElements = document.querySelectorAll('.pressableElement');
+            pressableElements.forEach(element => {
+                element.addEventListener('mousedown', () => {
+                    element.classList.add('pressed');
+                });
 
-            element.addEventListener('mouseup', () => {
-                element.classList.remove('pressed');
-            });
+                element.addEventListener('mouseup', () => {
+                    element.classList.remove('pressed');
+                });
 
-            element.addEventListener('mouseleave', () => {
-                element.classList.remove('pressed');
+                element.addEventListener('mouseleave', () => {
+                    element.classList.remove('pressed');
+                });
             });
-        });
 
         </script>
     </body>
