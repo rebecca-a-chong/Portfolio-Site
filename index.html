@@ -86,7 +86,7 @@
                             <h5>Web Design</h5>
                         </div>
                         <div class="thumbnail-headline-cta">
-                            <h2><strong>Improving conversion rates through a responsive redesign</strong></h2>
+                            <h2><strong>Improving conversion rates with a cross-platform design</strong></h2>
                         </div>
                     </div>
                 </div>
@@ -127,11 +127,11 @@
             const introBlurb = document.getElementById("intro-blurb");
             setTimeout(function () {
                 introBlurb.classList.add("autodot");
-            }, 2000); // Delay time (in milliseconds)
+            }, 1400); // Delay time (in milliseconds)
 
             setTimeout(function () {
                 introBlurb.classList.add("autoline");
-            }, 2000); // Delay time (in milliseconds)
+            }, 1400); // Delay time (in milliseconds)
 
             introBlurb.addEventListener("animationend", (event) => {
                 if (event.animationName === "dashed-line-fadeOutPath") {
@@ -208,6 +208,16 @@
 
             // Initial check on page load
             handleScroll();
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const arrowIcon = document.querySelector('.arrow-icon');
+            const projectContainer = document.querySelector('.project-container');
+
+            arrowIcon.addEventListener('click', function () {
+                // Scroll to the top of the project container
+                projectContainer.scrollIntoView({ behavior: 'smooth' });
+            });
         });
     </script>
 </body>
