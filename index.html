@@ -179,7 +179,7 @@
                 if (isInViewport(rippleAndSurge, offset - 150)) {
                     rippleAndSurge.classList.add("visible");
                 }
-                if (isInViewport(pivot, offset)) {
+                if (isInViewport(pivot, offset + 100)) {
                     pivot.classList.add("visible");
                 }
             }
@@ -210,13 +210,20 @@
             handleScroll();
         });
 
+        // Arrow Icon Scroll Effect
         document.addEventListener("DOMContentLoaded", function () {
             const arrowIcon = document.querySelector('.arrow-icon');
             const projectContainer = document.querySelector('.project-container');
 
             arrowIcon.addEventListener('click', function () {
-                // Scroll to the top of the project container
-                projectContainer.scrollIntoView({ behavior: 'smooth' });
+                // Calculate the target scroll position
+                const targetScrollPosition = projectContainer.offsetTop - 50;
+
+                // Scroll to the calculated position
+                window.scrollTo({
+                    top: targetScrollPosition,
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
