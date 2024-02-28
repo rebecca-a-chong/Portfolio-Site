@@ -171,11 +171,11 @@ body {
   opacity: 0;
   transform: translateY(1rem);
   animation: fadeInUp 0.3s forwards;
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 
 .intro-blurb {
-  animation-delay: 1s;
+  animation-delay: 0.7s;
   min-width: 22.5rem;
 }
 
