@@ -572,6 +572,81 @@ footer {
   color: #C88051;
 }
 
+    /* Comparison Slider */
+   
+    .container {
+      display: grid;
+      place-content: center;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #B4B4B4;
+      border-radius: 3px;
+      --position: 51%;
+      max-width: 900px;
+      margin: auto;
+   }
+
+   .image-container {
+    max-width: 900px;
+    height: auto;
+   }
+
+   .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+   }
+
+   .image-after {
+    position: absolute;
+    inset: 0;
+    width: var(--position);
+   }
+
+  .slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    opacity: 0;
+    /* For Firefox */
+    width: 100%;
+    height: 100%;
+  }
+
+  .slider:focus-visible ~.slider-button {
+    outline: 4px solid black;
+    outline-offset: 3px;
+  }
+
+  .slider-line {
+    position: absolute;
+    inset: 0;
+    width: .2rem;
+    height: 100%;
+    background-color: #FF6A59;
+    z-index: 10;
+    left: var(--position);
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .slider-button {
+    position: absolute;
+    background-color: #FF6A59;
+    color: black;
+    padding: .5rem;
+    border-radius: 100vw;
+    display: grid;
+    place-items: center;
+    top: 50%;
+    left: var(--position);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 100;
+    box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5)
+  }
+
 /* Images and Videos */
 
 .case-study-image {
@@ -647,7 +722,8 @@ footer {
 .case-study-video {
   width: 80%;
   height: auto;
-  border: 2px solid #DBDBDB;
+  border: 2px solid #B4B4B4;
+  border-radius: 3px;
 }
 
 .visible {
@@ -1054,6 +1130,18 @@ footer {
     width: calc(100% - 4rem);
   }
 
+  .container {
+    width: calc(100% - 4rem);
+ }
+
+ .slider-button {
+  position: absolute;
+  background-color: #FF6A59;
+  color: black;
+  padding: .3rem;
+  border-radius: 100vw;
+}
+
   .section-title {
     width: 100%;
     font-size: 16px;
@@ -1086,6 +1174,7 @@ footer {
   #pivot .accent-text {
     font-size: 1.00rem;
   }
+
 
   /* About Me ---------------------------------------------------------*/
 
@@ -1323,10 +1412,14 @@ footer {
   }
 
   .case-study-image {
-    width: calc(100% - 4rem);
+    width: calc(100% - 6rem);
   }
 
   .bottom-media-padding {
     margin-bottom: 2rem;
   }
+
+  .container {
+    width: calc(100% - 6rem);
+ }
 }
