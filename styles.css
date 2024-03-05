@@ -47,6 +47,7 @@ h5 {
 
 p {
   margin: 0em 0em 1.5em 0em;
+  line-height: 135%;
 }
 
 /* Miscellaneous */
@@ -710,9 +711,15 @@ footer {
 .body-container {
   display: flex;
   flex-direction: column;
-  max-width: 700px;
+  max-width: 800px;
   width: calc(100% - 4rem);
   margin: auto;
+}
+
+#about .accent-text {
+  color: #0078FC;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .trait-section {
@@ -720,8 +727,8 @@ footer {
   flex-direction: column;
   align-items: center;
   margin: auto;
-  gap: 48px;
-  margin: 2rem 2rem;
+  gap: 24px;
+  margin: 1rem 2rem 4rem 2rem;
 }
 
 .trait-container {
@@ -1123,6 +1130,10 @@ footer {
     margin: 2rem auto 3rem auto;
   }
 
+  #about h4 {
+    font-weight: 400;
+    font-size: 1.333rem;
+  }
 }
 
 
