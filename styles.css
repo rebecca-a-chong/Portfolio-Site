@@ -581,9 +581,12 @@ footer {
       overflow: hidden;
       border: 2px solid #B4B4B4;
       border-radius: 3px;
-      --position: 51%;
+      --position: 50.6%;
       max-width: 900px;
       margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 1s ease;
    }
 
    .image-container {
@@ -622,9 +625,9 @@ footer {
   .slider-line {
     position: absolute;
     inset: 0;
-    width: .2rem;
+    width: .25rem;
     height: 100%;
-    background-color: #FF6A59;
+    background-color: #C88051;
     z-index: 10;
     left: var(--position);
     transform: translateX(-50%);
@@ -633,7 +636,7 @@ footer {
 
   .slider-button {
     position: absolute;
-    background-color: #FF6A59;
+    background-color: #C88051;
     color: black;
     padding: .5rem;
     border-radius: 100vw;
@@ -1133,14 +1136,6 @@ footer {
   .container {
     width: calc(100% - 4rem);
  }
-
- .slider-button {
-  position: absolute;
-  background-color: #FF6A59;
-  color: black;
-  padding: .3rem;
-  border-radius: 100vw;
-}
 
   .section-title {
     width: 100%;

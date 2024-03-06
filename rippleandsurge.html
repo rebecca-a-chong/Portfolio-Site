@@ -200,23 +200,16 @@
         <div class="container bottom-media-padding">
             <div class="image-container">
                 <img src="img/Ripple and Surge - Mobile After.png" alt="After Image" class="image-after slider-image">
-                <img src="img/Ripple and Surge - Mobile Before.png" alt="Before Image" class="image-before slider-image">
+                <img src="img/Ripple and Surge - Mobile Before.png" alt="Before Image"
+                    class="image-before slider-image">
             </div>
             <input type="range" min="0" max="100" class="slider" aria-label="Percentage of before photo shown">
             <div class="slider-line"></div>
             <div class="slider-button" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
-                    <rect width="256" height="256" fill="none"></rect>
-                    <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="16"></line>
-                    <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="16"></line>
-                    <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="16"></polyline>
-                    <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="16"></line>
-                    <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="16"></polyline>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256">
+                    <path
+                        d="M208,140v36c0,25.59-8.49,42.85-8.85,43.58A8,8,0,0,1,192,224a7.9,7.9,0,0,1-3.57-.85,8,8,0,0,1-3.58-10.73c.06-.12,7.16-14.81,7.16-36.42V140a12,12,0,0,0-24,0v4a8,8,0,0,1-16,0V124a12,12,0,0,0-24,0v12a8,8,0,0,1-16,0V68a12,12,0,0,0-24,0V176a8,8,0,0,1-14.79,4.23l-18.68-30-.14-.23A12,12,0,1,0,33.6,162L62.89,212A8,8,0,1,1,49.08,220l-29.32-50a28,28,0,0,1,48.41-28.17L72,148V68a28,28,0,0,1,56,0V98.7a28,28,0,0,1,38.65,16.69A28,28,0,0,1,208,140Zm37.66-89.66-32-32a8,8,0,0,0-11.31,11.32L220.68,48H168a8,8,0,0,0,0,16h52.69L202.34,82.34a8,8,0,0,0,11.31,11.32l32-32A8,8,0,0,0,245.66,50.34Z">
+                    </path>
                 </svg>
             </div>
         </div>
@@ -250,9 +243,11 @@
                     to
                     generate buy-in.</p>
                 <p>
-                    Given the chance to revisit this project, I'd be interested in leveraging analytics tools
-                    to examine metrics such as the bounce rate,
-                    scroll depth, and time on page to inform future design iterations.
+                    Given the chance to revisit this project, I'd be interested to more deeply explore user behavior by
+                    moving beyond usability tests. I'd like to leverage analytics tools
+                    to examine metrics such as the bounce rate, heatmaps,
+                    scroll depth, and time on page to assess the effectiveness of the site's information hierarchy and
+                    inform future design iterations.
                 </p>
             </div>
         </div>
@@ -310,7 +305,7 @@
 
         // Content Reveal on Scroll effect //
         function revealElements() {
-            const elements = document.querySelectorAll('.case-study-section, .case-study-image');
+            const elements = document.querySelectorAll('.case-study-section, .container, .case-study-image');
 
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
