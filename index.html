@@ -73,6 +73,25 @@
 
         <div class="project-container">
 
+            <a href="fitbit.html">
+                <div class="thumbnail-content" id="fitbit-project">
+                    <div class="thumbnail-text-container">
+                        <div class="thumbnail-subheader">
+                            <h5>Fitbit</h5>
+                            <svg class="dot-divider" xmlns="http://www.w3.org/2000/svg" width="8" height="8"
+                                viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="4" fill="black" />
+                            </svg>
+                            <h5>App Feature Concept</h5>
+                        </div>
+                        <div class="thumbnail-headline-cta">
+                            <h2><strong>Motivating others through friendly competition</strong></h2>
+                        </div>
+                    </div>
+                    <img src="img/Fitbit Thumbnail.png" alt="Fitbit Challenges Thumbnail Image">
+                </div>
+            </a>
+
             <a href="rippleandsurge.html">
                 <div class="thumbnail-content" id="ripple-and-surge-project">
                     <img src="img/Ripple and Surge Thumbnail.png" alt="Ripple and Surge Thumbnail Image">
@@ -109,8 +128,8 @@
                     </div>
                     <img src="img/Pivot Thumbnail.png" alt="Pivot Thumbnail Image">
                 </div>
+            </a>
         </div>
-        </a>
     </main>
 
 
@@ -159,8 +178,10 @@
         // Hidden Content Effect //
         document.addEventListener("DOMContentLoaded", function () {
             // Get references to the project containers
+            const fitbit = document.getElementById("fitbit-project");
             const rippleAndSurge = document.getElementById("ripple-and-surge-project");
             const pivot = document.getElementById("pivot-project");
+
 
             // Function to check if an element is in the viewport
             function isInViewport(element, offset) {
@@ -176,6 +197,9 @@
             // Function to handle the scroll event
             function handleScroll() {
                 const offset = 400;
+                if (isInViewport(fitbit, offset - 150)) {
+                    fitbit.classList.add("visible");
+                }
                 if (isInViewport(rippleAndSurge, offset - 150)) {
                     rippleAndSurge.classList.add("visible");
                 }
@@ -188,6 +212,11 @@
             function handleResize() {
                 // Call handleScroll to check visibility after resize
                 handleScroll();
+
+                // Additional check for visibility of Fitbit after resize
+                if (isInViewport(fitbit)) {
+                    fitbit.classList.add("visible");
+                }
 
                 // Additional check for visibility of Pivot after resize
                 if (isInViewport(pivot)) {
