@@ -260,7 +260,32 @@
                 </p>
             </div>
         </div>
-    </div>
+
+        <div class="case-study-section">
+            <div class="case-study-content">
+                <a href="pivot.html" style="text-decoration: none;">
+                <div class="next-project-button pressableElement">
+                    <div class="next-project-button-text pressableElement">
+                        <h3><b>UP NEXT</b></h3>
+                        <h4>Connecting career changers to real info from real people</h4>
+                    </div>
+                    <div class="next-arrow-container pressableElement">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="background-circle" width="56" height="70"
+                            viewBox="0 0 56 70" fill="none">
+                            <circle cx="28" cy="42" r="28" fill="#FF6A59" fill-opacity="0.6" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="home-arrow-icon" width="56" height="70"
+                            viewBox="0 0 56 70" fill="none">
+                            <path
+                                d="M26.9393 50.0607C27.5251 50.6464 28.4749 50.6464 29.0607 50.0607L38.6066 40.5147C39.1924 39.9289 39.1924 38.9792 38.6066 38.3934C38.0208 37.8076 37.0711 37.8076 36.4853 38.3934L28 46.8787L19.5147 38.3934C18.9289 37.8076 17.9792 37.8076 17.3934 38.3934C16.8076 38.9792 16.8076 39.9289 17.3934 40.5147L26.9393 50.0607ZM26.5 6.55671e-08L26.5 49L29.5 49L29.5 -6.55671e-08L26.5 6.55671e-08Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+
 
     <footer>
         <p>Template-free &#9996
@@ -313,7 +338,7 @@
 
         // Content Reveal on Scroll effect //
         function revealElements() {
-            const elements = document.querySelectorAll('.case-study-section, .container, .case-study-image');
+            const elements = document.querySelectorAll('.case-study-section, .container, .case-study-image, .next-project-button');
 
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;

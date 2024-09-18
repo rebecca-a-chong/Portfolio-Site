@@ -27,7 +27,7 @@
                     <h3><strong><a href="about.html" class="pressableElement">Ab<span
                                     class="about-letter">o</span>ut</a></strong>
                     </h3>
-                </li>
+                    </li>
             </ul>
         </div>
     </header>
@@ -98,7 +98,8 @@
             <div class="section-title">The Bottom of Why</div>
             <div class="line-divider"></div>
             <div class="case-study-content">
-                <p>The first question that came to mind was: Why was engagement dropping? I turned to behavioral psychology
+                <p>The first question that came to mind was: Why was engagement dropping? I turned to behavioral
+                    psychology
                     and soon discovered the Fogg Behavior Model.
                 </p>
             </div>
@@ -149,7 +150,8 @@
             <div class="section-subtitle">Issuing a Challenge</div>
             <div class="line-divider"></div>
             <div class="case-study-content section-margin">
-                <p>On the new Challenges page, users can send Challenges to each other by tapping the floating action button.</p>
+                <p>On the new Challenges page, users can send Challenges to each other by tapping the floating action
+                    button.</p>
 
                 <p>The Challenger wagers Tokens, with Fitbit automatically suggesting an amount
                     based on difficulty. Alternatively, users can set wagers manually. The Challengee must match the
@@ -193,7 +195,8 @@
             <div class="case-study-content">
                 <p>A user’s current Token balance can be conveniently viewed from the app’s home page. </p>
 
-                <p>Tapping on the tile reveals a detailed breakdown of the user's weekly and monthly Token sources and their
+                <p>Tapping on the tile reveals a detailed breakdown of the user's weekly and monthly Token sources and
+                    their
                     ranking on the leaderboards.</p>
                 <div class="case-study-video-container">
                     <video controls autoplay muted loop class="case-study-video">
@@ -213,25 +216,48 @@
                     with the rest of the app. I repeatedly found myself asking: What matters most to users on this
                     screen? How can I simplify this?
                 </p>
-                </div>
-                </div>
-                <img src="img/Fibit - Challenge Tile Iteration.png" class="case-study-image">
-
-
-
-                <div class="case-study-section">
-                    <div class="line-divider"></div>
-                    <div class="case-study-content">
-                        <p>Overall, this project was a fun exploration in balancing creativity with consistency within an
-                            existing system. </p>
-                
-                        <p>Should I revisit this project in the future, I’d love to gauge interest in implementing a 
-                            “Streaks” feature, where users could earn more tokens through a Multiplier effect based on the
-                            number of consecutive challenges completed.</p>
-                    </div>
-                </div>
             </div>
         </div>
+        <img src="img/Fibit - Challenge Tile Iteration.png" class="case-study-image">
+
+        <div class="case-study-section">
+            <div class="line-divider"></div>
+            <div class="case-study-content">
+                <p>Overall, this project was a fun exploration in balancing creativity with consistency within an
+                    existing system. </p>
+
+                <p>Should I revisit this project in the future, I’d love to gauge interest in implementing a
+                    “Streaks” feature, where users could earn more tokens through a Multiplier effect based on the
+                    number of consecutive challenges completed.</p>
+            </div>
+        </div>
+
+        <div class="case-study-section">
+            <div class="case-study-content">
+                <a href="rippleandsurge.html" style="text-decoration: none;">
+                <div class="next-project-button pressableElement">
+                    <div class="next-project-button-text pressableElement">
+                        <h3><b>UP NEXT</b></h3>
+                        <h4>Improving brand awareness with a cross-platform design</h4>
+                    </div>
+                    <div class="next-arrow-container pressableElement">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="background-circle" width="56" height="70"
+                            viewBox="0 0 56 70" fill="none">
+                            <circle cx="28" cy="42" r="28" fill="#FF6A59" fill-opacity="0.6" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="home-arrow-icon" width="56" height="70"
+                            viewBox="0 0 56 70" fill="none">
+                            <path
+                                d="M26.9393 50.0607C27.5251 50.6464 28.4749 50.6464 29.0607 50.0607L38.6066 40.5147C39.1924 39.9289 39.1924 38.9792 38.6066 38.3934C38.0208 37.8076 37.0711 37.8076 36.4853 38.3934L28 46.8787L19.5147 38.3934C18.9289 37.8076 17.9792 37.8076 17.3934 38.3934C16.8076 38.9792 16.8076 39.9289 17.3934 40.5147L26.9393 50.0607ZM26.5 6.55671e-08L26.5 49L29.5 49L29.5 -6.55671e-08L26.5 6.55671e-08Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
     </div>
 
     <footer>
@@ -285,7 +311,7 @@
 
         // Content Reveal on Scroll effect //
         function revealElements() {
-            const elements = document.querySelectorAll('.case-study-section, .case-study-image');
+            const elements = document.querySelectorAll('.case-study-section, .case-study-image, .next-project-button');
 
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
